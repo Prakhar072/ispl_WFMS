@@ -1,29 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-    <script src="https://kit.fontawesome.com/e8732148d9.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <center>
-<div style="width: 1440px; height: 1024px; position: relative; background: white">
-  <div style="width: 1440px; height: 59px; left: 0px; top: 0px; position: absolute; background: #1D8AA1; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)"></div>
-  <div style="width: 77px; height: 77px; left: 9px; top: 11px; position: absolute; background: white; border-radius: 9999px; border: 1px black solid"></div>
-  <div style="width: 47px; height: 47px; padding-top: 3.67px; padding-bottom: 5.08px; padding-left: 3.64px; padding-right: 3.71px; left: 20px; top: 22px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
-    <i class='fas fa-user-alt' style='font-size:35px'></i>
-  </div>
-  <div style="width: 178px; height: 28px; left: 93px; top: 16px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">XYZ</div>
-  <div style="left: 1222px; top: 15px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Monday, 1/5/2024</div>
-  <div style="left: 1105px; top: 15px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">9:00 AM</div>
-  <div style="left: 653px; top: 16px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Database</div>
-  <div style="left: 779px; top: 16px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Team Members</div>
+<?php require_once('../common/header.php') ?>
   <div style="width: 1377px; height: 853px; left: 31px; top: 134px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid"></div>
   <div style="width: 1298px; height: 90px; left: 62px; top: 331px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid"></div>
   <div style="width: 1298px; height: 90px; left: 62px; top: 429px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid"></div>
   <div style="width: 1298px; height: 90px; left: 62px; top: 527px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid"></div>
   <div style="width: 1298px; height: 90px; left: 62px; top: 625px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid"></div>
   <div style="width: 1298px; height: 90px; left: 62px; top: 723px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid"></div>
-  <div style="left: 998px; top: 77px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Internal Position Requests</div>
+  <div style="left: 1040px; top: 77px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Internal Position Requests</div>
   <div style="left: 90px; top: 362px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">1</div>
   <div style="left: 90px; top: 460px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">2</div>
   <div style="left: 90px; top: 558px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">3</div>
@@ -60,47 +42,18 @@
   <div style="left: 920px; top: 294px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Role</div>
   <div style="left: 920px; top: 294px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Role</div>
   <div style="left: 1133px; top: 294px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Experience (Y)</div>
-  <div style="width: 49px; height: 49px; padding-left: 8.17px; padding-right: 8.17px; padding-top: 6.12px; padding-bottom: 6.12px; left: 586px; top: 5px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
-    <i class="fas fa-house-user" style="font-size: 30px;color:white;"></i>
-  </div>
+
   <div style="left: 216px; top: 362px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">2022B3A70426P</div>
   <div style="left: 216px; top: 460px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">2022A8PS1805H</div>
   <div style="left: 216px; top: 558px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">2022B3A70426P</div>
   <div style="left: 216px; top: 656px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">2022B3A70426P</div>
   <div style="left: 216px; top: 754px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">2022B3A70426P</div>
   <div style="left: 233px; top: 294px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Employee Code</div>
-  <div style="width: 334px; height: 69px; left: 1035px; top: 889px; position: absolute; background: #1D8AA1; border-radius: 44px"></div>
-  <div style="left: 1055px; top: 904px; position: absolute; color: white; font-size: 32px; font-family: Inter; font-weight: 400; word-wrap: break-word">Fill vacant positions</div>
-  <div style="width: 1440px; height: 59px; left: 0px; top: 0px; position: absolute; background: #1D8AA1; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)"></div>
-  <div style="width: 77px; height: 77px; left: 9px; top: 11px; position: absolute; background: white; border-radius: 9999px; border: 1px black solid"></div>
-  <div style="width: 47px; height: 47px; padding-top: 3.67px; padding-bottom: 5.08px; padding-left: 3.64px; padding-right: 3.71px; left: 24px; top: 26px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
-    <div style="width: 39.65px; height: 38.25px; background: black"></div>
-  </div>
-  <div style="width: 178px; height: 28px; left: 93px; top: 16px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word"> XYZ</div>
-  <div style="left: 1222px; top: 15px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Monday, 1/5/2024</div>
-  <div style="left: 1105px; top: 15px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">9:00 AM</div>
-  <div style="left: 621px; top: 16px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Tasks</div>
-  <div style="left: 713px; top: 15px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Projects</div>
-  <div style="width: 49px; height: 49px; padding-left: 8.17px; padding-right: 8.17px; padding-top: 6.12px; padding-bottom: 6.12px; left: 535px; top: 5px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
-    <div style="width: 32.67px; height: 36.75px; background: white"></div>
-  </div>
+  <input type="button" style="width: 334px; height: 69px; left: 1035px; top: 889px; position: absolute; background: #1D8AA1; border-radius: 44px">
+  <div style="left: 1075px; top: 904px; position: absolute; color: white; font-size: 32px; font-family: Inter; font-weight: 400; word-wrap: break-word">Fill vacant positions</div>
   <div style="left: 55px; top: 148px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 36px; font-family: Inter; font-weight: 500; word-wrap: break-word">Project XYZ</div>
   <div style="left: 62px; top: 199px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Electronics product deal with NVIDIA </div>
-  <div style="left: 59px; top: 941px; position: absolute; color: #1D8AA1; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Back</div>
-  <div style="width: 1440px; height: 59px; left: 0px; top: 0px; position: absolute; background: #1D8AA1; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)"></div>
-  <div style="width: 77px; height: 77px; left: 9px; top: 11px; position: absolute; background: white; border-radius: 9999px; border: 1px black solid"></div>
-  <div style="width: 47px; height: 47px; padding-top: 3.67px; padding-bottom: 5.08px; padding-left: 3.64px; padding-right: 3.71px; left: 24px; top: 26px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
-    <div style="width: 39.65px; height: 38.25px; background: black"></div>
-  </div>
-  <div style="width: 178px; height: 28px; left: 93px; top: 16px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">HR Admin</div>
-  <div style="left: 1222px; top: 15px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Monday, 1/5/2024</div>
-  <div style="left: 1105px; top: 15px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">9:00 AM</div>
-  <div style="left: 653px; top: 16px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Database</div>
-  <div style="left: 779px; top: 16px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Teams</div>
-  <div style="width: 49px; height: 49px; padding-left: 8.17px; padding-right: 8.17px; padding-top: 6.12px; padding-bottom: 6.12px; left: 586px; top: 5px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
-    <div style="width: 32.67px; height: 36.75px; background: white"></div>
+  <a href="https://www.youtube.com/"><div style="left: 59px; top: 941px; position: absolute; color: #1D8AA1; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Back</div></a>
   </div>
 </div>
-</center>
-</body>
-</html>
+<?php require_once('../common/footer.php') ?>

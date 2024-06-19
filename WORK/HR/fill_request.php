@@ -1,33 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-    <script src="https://kit.fontawesome.com/e8732148d9.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <center>
-<div style="width: 1440px; height: 1024px; position: relative; background: white">
-  <div style="width: 1440px; height: 59px; left: 0px; top: 0px; position: absolute; background: #1D8AA1; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)"></div>
-  <div style="width: 77px; height: 77px; left: 9px; top: 11px; position: absolute; background: white; border-radius: 9999px; border: 1px black solid"></div>
-  <div style="width: 47px; height: 47px; padding-top: 3.67px; padding-bottom: 5.08px; padding-left: 3.64px; padding-right: 3.71px; left: 20px; top: 22px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
-    <i class='fas fa-user-alt' style='font-size:35px'></i>
-  </div>
-  <div style="width: 178px; height: 28px; left: 93px; top: 16px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">HR Admin</div>
-  <div style="left: 1222px; top: 15px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Monday, 1/5/2024</div>
-  <div style="left: 1105px; top: 15px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">9:00 AM</div>
-  <div style="left: 653px; top: 16px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Database</div>
-  <div style="left: 779px; top: 16px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Teams</div>
+<?php require_once('../common/header.php') ?>
   <div style="width: 1377px; height: 853px; left: 31px; top: 134px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid"></div>
   <div style="left: 1229px; top: 77px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Fill Request</div>
-  <div style="width: 49px; height: 49px; padding-left: 8.17px; padding-right: 8.17px; padding-top: 6.12px; padding-bottom: 6.12px; left: 586px; top: -1px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
-    <i class="fas fa-house-user" style="font-size: 30px;color:white;"></i>
-  </div>
+  
   <div style="width: 505px; height: 90px; left: 71px; top: 556px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid"></div>
   <div style="left: 105px; top: 587px; position: absolute; color: rgba(0, 0, 0, 0.50); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Select from drop down</div>
   <div style="width: 502px; height: 69px; left: 71px; top: 862px; position: absolute; background: #1D8AA1; border-radius: 44px"></div>
   <div style="width: 243px; height: 69px; left: 1130px; top: 158px; position: absolute; background: #61FF00; border-radius: 44px"></div>
   <div style="width: 283px; left: 185px; top: 872px; position: absolute; color: white; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word">Close Request</div>
-  <div style="left: 1305px; top: 942px; position: absolute; color: #1D8AA1; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Cancel</div>
+  <a href="https://www.youtube.com/"><div style="left: 1305px; top: 942px; position: absolute; color: #1D8AA1; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Cancel</div></a>
   <div style="left: 76px; top: 178px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Request  </div>
   <div style="left: 327px; top: 178px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Junior Software Developer</div>
   <div style="left: 327px; top: 231px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">2 </div>
@@ -44,6 +24,4 @@
     <div style="width: 45.75px; height: 45.75px; background: #1D8AA1"></div>
   </div>
 </div>
-</center>
-</body>
-</html>
+<?php require_once('../common/footer.php') ?>

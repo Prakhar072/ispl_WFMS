@@ -1,30 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-    <script src="https://kit.fontawesome.com/e8732148d9.js" crossorigin="anonymous"></script>
-</head>
-<body>
-<center>
-<div style="width: 1440px; height: 1024px; position: relative; background: white">
-  <div style="width: 1440px; height: 59px; left: 0px; top: 0px; position: absolute; background: #1D8AA1; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)"></div>
-  <div style="width: 77px; height: 77px; left: 9px; top: 11px; position: absolute; background: white; border-radius: 9999px; border: 1px black solid"></div>
-  <div style="width: 47px; height: 47px; padding-top: 3.67px; padding-bottom: 5.08px; padding-left: 3.64px; padding-right: 3.71px; left: 20px; top: 22px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
-    <i class='fas fa-user-alt' style='font-size:35px'></i>
+<?php require_once('../common/header.php') ?>
+
+  <div class="white_card" style="width: 559px; height: 341px; left: 825px; top: 153px; position: absolute;"></div>
+  <div class="white_card" style= "left: 41px; top: 153px; position: absolute; width: 738px; height: 829px">
+    <div class="white_card" style= "left: 30px; top: 150px; position: absolute;"></div>
+    <div class="white_card" style= "left: 30px; top: 370px; position: absolute;"></div>
+    <div class="white_card" style= "left: 30px; top: 590px; position: absolute;"></div>
   </div>
-  <div style="width: 178px; height: 28px; left: 93px; top: 16px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">XYZ</div>
-  <div style="left: 1222px; top: 15px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Monday, 1/5/2024</div>
-  <div style="left: 1105px; top: 15px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">9:00 AM</div>
-  <div style="left: 653px; top: 16px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Database</div>
-  <div style="left: 779px; top: 16px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Teams</div>
-  <div style="width: 49px; height: 49px; padding-left: 8.17px; padding-right: 8.17px; padding-top: 6.12px; padding-bottom: 6.12px; left: 586px; top: 5px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
-    <div style="width: 32.67px; height: 36.75px; background: white"></div>
-  </div>
-  <div style="width: 559px; height: 341px; left: 825px; top: 153px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid"></div>
-  <div style="width: 738px; height: 829px; left: 41px; top: 153px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid"></div>
-  <div style="width: 676px; height: 192px; left: 73px; top: 302px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid"></div>
-  <div style="width: 676px; height: 192px; left: 74px; top: 520px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid"></div>
-  <div style="width: 676px; height: 192px; left: 75px; top: 738px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid"></div>
   <div style="left: 852px; top: 182px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Open Positions by Department</div>
   <div style="left: 73px; top: 182px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Open Position Requests</div>
   <div style="left: 914px; top: 446px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">IT</div>
@@ -32,11 +13,11 @@
   <div style="left: 1079px; top: 446px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">SALES</div>
   <div style="left: 1190px; top: 446px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">CS</div>
   <div style="left: 1278px; top: 446px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">R&D</div>
-  <div style="width: 54px; height: 152px; left: 898px; top: 269px; position: absolute; background: rgba(0, 7.86, 78.63, 0.75)"></div>
-  <div style="width: 54px; height: 113px; left: 991px; top: 309px; position: absolute; background: rgba(0, 201.75, 214.62, 0.75)"></div>
-  <div style="width: 54px; height: 53px; left: 1084px; top: 369px; position: absolute; opacity: 0.75; background: #004AB9"></div>
-  <div style="width: 54px; height: 179px; left: 1177px; top: 242px; position: absolute; opacity: 0.75; background: #0094E7"></div>
-  <div style="width: 54px; height: 86px; left: 1270px; top: 335px; position: absolute; opacity: 0.75; background: #E40000"></div>
+  <div class="bar" style="left: 898px; height: 152px; top: 269px;"></div>
+  <div class="bar" style="left: 991px; height: 152px; top: 269px; background: rgba(0, 201.75, 214.62, 0.75)"></div>
+  <div class="bar" style="left: 1084px; height: 152px; top: 269px; background: #004AB9"></div>
+  <div class="bar" style="left: 1177px; height: 152px; top: 269px; background: #0094E7"></div>
+  <div class="bar" style="left: 1270px; height: 152px; top: 269px; background: #E40000"></div>
   <div style="width: 486px; height: 0px; left: 862px; top: 421px; position: absolute; border: 2px black solid"></div>
   <div style="width: 197px; left: 1243px; top: 88px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Teams Tab</div>
   <div style="left: 88px; top: 322px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 28px; font-family: Inter; font-weight: 400; word-wrap: break-word">Junior Software Developer(2)</div>
@@ -52,9 +33,7 @@
   <div style="width: 598px; height: 92px; left: 88px; top: 412px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Requesting Junior Software developers proficient in FIGMA, PHP, C++ and 3 Years of experience in AI</div>
   <div style="width: 598px; height: 92px; left: 89px; top: 630px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Requesting Junior Software developers proficient in FIGMA, PHP, C++ and 3 Years of experience in AI</div>
   <div style="width: 598px; height: 92px; left: 90px; top: 848px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Requesting Junior Software developers proficient in FIGMA, PHP, C++ and 3 Years of experience in AI</div>
-  <div style="width: 574px; height: 40px; left: 67px; top: 229px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 48px; border: 1px rgba(0, 0, 0, 0.50) solid"></div>
-  <div style="width: 358px; height: 26px; left: 84px; top: 237px; position: absolute; color: rgba(0, 0, 0, 0.50); font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">Search by Name, Department or ID</div>
+  <input class="searchbar" style=" left: 67px; top: 229px; position: absolute; padding-left: 18px;" type="text" placeholder="Search by Name, ID or Department"></div>
 </div>
-</center>
-</body>
-</html>
+
+<?php require_once('../common/footer.php') ?>
