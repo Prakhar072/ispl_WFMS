@@ -11,7 +11,7 @@
 <!--top navbar starts-->
 <div style="width: 1440px; height: 59px; left: 0px; top: 0px; position: absolute; background: #1D8AA1; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">  
     
-    <span style="left: 1202px; top: 15px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word" id="datetime"></span>
+    <span style="left: 1190px; top: 15px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word" id="datetime"></span>
  
   </div>
   <div style="width: 77px; height: 77px; left: 9px; top: 11px; position: absolute; background: white; border-radius: 9999px; border: 1px black solid"></div>

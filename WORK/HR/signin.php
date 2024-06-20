@@ -7,7 +7,6 @@
   color: rgb(0, 0, 0);
   opacity: 0.5; /* Firefox */
   font-size: 35px;
-  padding-left: 7px;
 }
     </style>
 </head>
