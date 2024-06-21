@@ -1,11 +1,13 @@
 <?php require_once('../common/header.php') ?>
 
   <div class="white_card" style="width: 559px; height: 341px; left: 825px; top: 153px; position: absolute;"></div>
+
   <div class="white_card" style= "left: 41px; top: 153px; position: absolute; width: 738px; height: 829px">
     <div class="white_card" style= "left: 30px; top: 150px; position: absolute;"></div>
     <div class="white_card" style= "left: 30px; top: 370px; position: absolute;"></div>
     <div class="white_card" style= "left: 30px; top: 590px; position: absolute;"></div>
   </div>
+  
   <div style="left: 852px; top: 182px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Open Positions by Department</div>
   <div style="left: 73px; top: 182px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Open Position Requests</div>
   <div style="left: 914px; top: 446px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">IT</div>
