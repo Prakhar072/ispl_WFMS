@@ -1,7 +1,7 @@
 <?php require_once('../common/header.php') ?>
 
   
-  <div style="left:88px; top:100px; position:absolute; height:800px">
+  <div style="left:78px; top:100px; position:absolute; height:800px">
   
     <div class="card-container">
     <div>
@@ -12,16 +12,19 @@
       <div class="card">
         <p style="margin-top:15px; margin-bottom:0px; text-align:left; padding-left:15px; color: rgba(0, 0, 0, 0.75); font-size: 28px; font-family: Inter; font-weight: 400; word-wrap: break-word">Junior Software Developer</p>
         <p style="margin-top:8px; margin-bottom:0px; text-align:left; padding-left:15px; color: rgba(0, 0, 0, 0.75); font-size: 22px; font-family: Inter; font-weight: 400; word-wrap: break-word">Tim Cook, Finance</p>
-        <p style="margin-top:8px; margin-bottom:0px; text-align:left; padding-left:15px; color: rgba(0, 0, 0, 0.75); font-size: 22px; font-family: Inter; font-weight: 400; word-wrap: break-word">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, perspiciatis sed exercitationem in, rerum nesciunt libero dolorum, enim assumenda doloribus obcaecati. Id qui dolor ex eum doloribus repudiandae sunt impedit.</p>
+        <p style="margin-top:8px; margin-bottom:20px; text-align:left; padding-left:15px; color: rgba(0, 0, 0, 0.75); font-size: 22px; font-family: Inter; font-weight: 400; word-wrap: break-word">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, perspiciatis sed exercitationem in, rerum nesciunt libero dolorum, enim ass qui dolor ex eum doloribus repudiandae sunt impedit.</p>
     </div>
     <div class="card">
-        <h3>card heading</h3>
-        <p class="card-body">This is card body</p>
+        <p style="margin-top:15px; margin-bottom:0px; text-align:left; padding-left:15px; color: rgba(0, 0, 0, 0.75); font-size: 28px; font-family: Inter; font-weight: 400; word-wrap: break-word">Junior Software Developer</p>
+        <p style="margin-top:8px; margin-bottom:0px; text-align:left; padding-left:15px; color: rgba(0, 0, 0, 0.75); font-size: 22px; font-family: Inter; font-weight: 400; word-wrap: break-word">Tim Cook, Finance</p>
+        <p style="margin-top:8px; margin-bottom:20px; text-align:left; padding-left:15px; color: rgba(0, 0, 0, 0.75); font-size: 22px; font-family: Inter; font-weight: 400; word-wrap: break-word">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, perspiciatis sed exercitationem in, rerum nesciunt libero dolorum, enim ass qui dolor ex eum doloribus repudiandae sunt impedit.</p>
     </div>
     <div class="card">
-        <h3>card heading</h3>
-        <p class="card-body">This is card body</p>
+        <p style="margin-top:15px; margin-bottom:0px; text-align:left; padding-left:15px; color: rgba(0, 0, 0, 0.75); font-size: 28px; font-family: Inter; font-weight: 400; word-wrap: break-word">Junior Software Developer</p>
+        <p style="margin-top:8px; margin-bottom:0px; text-align:left; padding-left:15px; color: rgba(0, 0, 0, 0.75); font-size: 22px; font-family: Inter; font-weight: 400; word-wrap: break-word">Tim Cook, Finance</p>
+        <p style="margin-top:8px; margin-bottom:20px; text-align:left; padding-left:15px; color: rgba(0, 0, 0, 0.75); font-size: 22px; font-family: Inter; font-weight: 400; word-wrap: break-word">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, perspiciatis sed exercitationem in, rerum nesciunt libero dolorum, enim ass qui dolor ex eum doloribus repudiandae sunt impedit.</p>
     </div>
+    
     </div>
     </div>
 

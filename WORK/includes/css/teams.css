@@ -1,6 +1,8 @@
 
 .card-container{
-    width: 638px;
+    width: 658px;
+    height: 753px;
+    overflow-y: auto;
     left:50px;
     top: 500px;
     background: white; 
@@ -10,7 +12,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 100px repeat(3, 192px);
     row-gap: 26px;
-    padding:25px;
+    padding: 25px;
 }
 
 .card{
@@ -28,7 +30,7 @@
 
 .searchbar{
     width: 574px; height: 40px; 
-    background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 48px; border: 1px rgba(0, 0, 0, 0.50) solid
+    background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 48px; border: 1px rgba(0, 0, 0, 0.50) solid;
 }
 
 ::placeholder{
@@ -36,3 +38,34 @@
     opacity: 0.5; 
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+    height: 100px;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    display: block;
+    height: 1px;
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #eee;
+    -webkit-border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: #ccc;
+    -webkit-border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    width: 50px;
+    background-color: #ccc;
+    -webkit-border-radius: 0px;
+}
