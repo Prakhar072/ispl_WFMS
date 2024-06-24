@@ -1,3 +1,26 @@
+
+.card-container{
+    width: 638px;
+    left:50px;
+    top: 500px;
+    background: white; 
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); 
+    border: 1px rgba(0, 0, 0, 0.25) solid;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px repeat(3, 192px);
+    row-gap: 26px;
+    padding:25px;
+}
+
+.card{
+    width:638px;
+    justify-self: center;
+    background: white; 
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); 
+    border: 1px rgba(0, 0, 0, 0.25) solid;
+}
+
 .white_card{
     width: 676px; height: 192px;  
     background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid;
@@ -13,7 +36,10 @@
     opacity: 0.5; 
 }
 
-.bar{
-    width: 54px; position:absolute; 
-    background: rgba(0, 7.86, 78.63, 0.75)
-}
+#footer {
+    position : absolute;
+    text-align: center;
+    bottom : 0;
+    height : 40px;
+    margin-top : 40px;
+  }

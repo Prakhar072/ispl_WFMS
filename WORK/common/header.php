@@ -7,7 +7,7 @@
 </head>
 <body>
     <center>
-<div style="width: 1440px; height: 1024px; position: relative; background: white">
+<div style="width: 1440px; height: 1024px; left:250px; top: 0px; position: absolute; background: white">
 <!--top navbar starts-->
 <div style="width: 1440px; height: 59px; left: 0px; top: 0px; position: absolute; background: #1D8AA1; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">  
     
