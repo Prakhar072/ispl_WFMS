@@ -1,25 +1,150 @@
 <?php require_once('../common/header.php') ?>
-  <div style="width: 1377px; height: 853px; left: 31px; top: 134px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid"></div>
+
+<div style="left: 1199px; top: 81px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Notifications</div>
+<!--<a href="https://www.youtube.com/"><div style="left: 71px; top: 954px; position: absolute; color: #1D8AA1; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">Load Page 2</div></a>-->
+
+<div style="left:7px; top:135px; position:absolute; height:800px">
+  
+  <!--<div class="card-container-long">
+    <div>-->
+      <div style="float:left; width:1300px; padding-left:4px; padding-bottom:14px; text-align:start; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">System</div>
+      <div style="float:right; width:30px; padding-left:4px; text-align:end; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">5</div>
+      <input class="searchbar" style=" width:450px; height:30px; float:left; padding-left: 18px; margin-bottom:18px;" type="text" placeholder="Search by Name, ID or Department">
+     <div class="table"><table class="tg"><thead>
+  <tr>
+    <th class="tg-0lax">S no.</th>
+    <th class="tg-0lax">Employee Code</th>
+    <th class="tg-0lax">First Name</th>
+    <th class="tg-0lax">Last Name</th>
+    <th class="tg-0lax">Sent At</th>
+    <th class="tg-0lax">Action</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">1</td>
+    <td class="tg-0lax">2022B3A70426P</td>
+    <td class="tg-0lax">PM</td>
+    <td class="tg-0lax">MP</td>
+    <td class="tg-0lax">3/5/12</td>
+    <td class="tg-0lax">EMAIL</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">2</td>
+    <td class="tg-0lax">2022B3A70426P</td>
+    <td class="tg-0lax">PM</td>
+    <td class="tg-0lax">MP</td>
+    <td class="tg-0lax">3/5/12</td>
+    <td class="tg-0lax">EMAIL</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">3</td>
+    <td class="tg-0lax">2022B3A70426P</td>
+    <td class="tg-0lax">PM</td>
+    <td class="tg-0lax">MP</td>
+    <td class="tg-0lax">3/5/12</td>
+    <td class="tg-0lax">EMAIL</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">4</td>
+    <td class="tg-0lax">2022B3A70426P</td>
+    <td class="tg-0lax">PM</td>
+    <td class="tg-0lax">MP</td>
+    <td class="tg-0lax">3/5/12</td>
+    <td class="tg-0lax">EMAIL</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">5</td>
+    <td class="tg-0lax">2022B3A70426P</td>
+    <td class="tg-0lax">PM</td>
+    <td class="tg-0lax">MP</td>
+    <td class="tg-0lax">3/5/12</td>
+    <td class="tg-0lax">EMAIL</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">6</td>
+    <td class="tg-0lax">2022B3A70426P</td>
+    <td class="tg-0lax">PM</td>
+    <td class="tg-0lax">MP</td>
+    <td class="tg-0lax">3/5/12</td>
+    <td class="tg-0lax">EMAIL</td>
+  </tr>
+</tbody></table></div>
+    
+
+  <!--</div>
+  </div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div style="left: 99px; top: 291px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">1</div>
+<div style="left: 86px; top: 153px; position: absolute; color: rgba(0, 0, 0, 0.50); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Search by Name, Department or ID</div>
   <div style="width: 1298px; height: 90px; left: 71px; top: 260px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid"></div>
   <div style="width: 636px; height: 44px; left: 67px; top: 145px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 48px; border: 1px rgba(0, 0, 0, 0.50) solid"></div>
   <div style="width: 1298px; height: 90px; left: 71px; top: 358px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid"></div>
+  <div style="width: 1298px; height: 90px; left: 71px; top: 848px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid"></div>
   <div style="width: 1298px; height: 90px; left: 71px; top: 456px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid"></div>
   <div style="width: 1298px; height: 90px; left: 71px; top: 554px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid"></div>
   <div style="width: 1298px; height: 90px; left: 71px; top: 652px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid"></div>
   <div style="width: 1298px; height: 90px; left: 71px; top: 750px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid"></div>
-  <div style="width: 1298px; height: 90px; left: 71px; top: 848px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid"></div>
-  <div style="left: 1199px; top: 81px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Notifications</div>
-  <div style="left: 99px; top: 291px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">1</div>
   <div style="left: 99px; top: 389px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">2</div>
   <div style="left: 99px; top: 487px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">3</div>
   <div style="left: 99px; top: 585px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">4</div>
   <div style="left: 99px; top: 683px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">5</div>
   <div style="left: 99px; top: 781px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">6</div>
   <div style="left: 99px; top: 879px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">7</div>
-  <a href="https://www.youtube.com/"><div style="left: 71px; top: 954px; position: absolute; color: #1D8AA1; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">Load Page 2</div></a>
   <div style="left: 76px; top: 223px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">S No.</div>
   <div style="left: 435px; top: 223px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">First Name</div>
-  <div style="left: 86px; top: 153px; position: absolute; color: rgba(0, 0, 0, 0.50); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Search by Name, Department or ID</div>
   <div style="left: 608px; top: 223px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Last Name</div>
   <div style="left: 453px; top: 291px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Prakhar</div>
   <div style="left: 986px; top: 292px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Created New Project</div>
@@ -59,6 +184,6 @@
   <div style="left: 182px; top: 683px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">2022B3A70426P</div>
   <div style="left: 182px; top: 781px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">2022B3A70426P</div>
   <div style="left: 182px; top: 879px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">2022B3A70426P</div>
-  <div style="left: 191px; top: 223px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Employee Code</div>
-</div>
+  <div style="left: 191px; top: 223px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Employee Code</div>-->
+
 <?php require_once('../common/footer.php') ?>

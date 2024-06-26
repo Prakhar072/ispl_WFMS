@@ -23,6 +23,31 @@
     border: 1px rgba(0, 0, 0, 0.25) solid;
 }
 
+.card-container-long{
+    width: 1377px;
+    height: 853px;
+    /*overflow-y: auto;*/
+    left:50px;
+    top: 500px;
+    background: white; 
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); 
+    border: 1px rgba(0, 0, 0, 0.25) solid;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px repeat(20, 90px);
+    row-gap: 20px;
+    padding: 25px;
+}
+
+.card-long{
+    width:1360px;
+    justify-self: center;
+    background: white; 
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); 
+    border: 1px rgba(0, 0, 0, 0.25) solid;
+}
+
+
 .white_card{
     width: 676px; height: 192px;  
     background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid;
@@ -68,4 +93,32 @@
     width: 50px;
     background-color: #ccc;
     -webkit-border-radius: 0px;
+}
+
+.tg{
+    width: 1290px;
+    height: 790px;
+    margin-top: 50px;
+	font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
+
+.tg-0lax{
+    text-align: center;
+}
+
+.table {
+    width: 1300px;
+    height: 800px;
+	justify-content: center;
+	align-items: center;
+	margin: 5px;
+    border: 2px;
+}
+
+.table td, .table th {
+  width:  Xpx;
+  border: 3px solid #000000;
+  border-collapse: collapse;
+  padding: 10px;
 }
