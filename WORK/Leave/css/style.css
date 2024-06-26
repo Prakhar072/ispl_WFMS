@@ -1,0 +1,227 @@
+.intro_button	{
+	width: 502px;
+	height: 69px; 
+	left: 469px; 
+	top: 321px; 
+	position: absolute;
+	border-color: transparent; 
+	background: #1D8AA1; 
+	border-radius: 44px;
+	color: white; 
+	font-size: 40px; 
+	font-family: Inter; 
+	font-weight: 400; 
+	word-wrap: break-word;
+}
+
+.leave_application	{
+	left: 1132px; 
+	top: 77px; 
+	position: absolute; 
+	color: black; 
+	font-size: 32px; 
+	font-family: Inter; 
+	font-weight: 600; 
+	word-wrap: break-word;
+}
+.status_head	{
+	top: 170px; 
+	position: absolute; 
+	color: rgba(0, 0, 0, 0.75); 
+	font-size: 24px; 
+	font-family: Inter; 
+	font-weight: 400; 
+	word-wrap: break-word
+}
+.leave_box	{
+	width: 1298px; 
+	height: 90px; 
+	left: 58px;
+	position: absolute; 
+	background: white; 
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+	border: 1px rgba(0, 0, 0, 0.50) solid;
+
+}
+.serialno	{
+	left: 86px; 
+	position: absolute; 
+	color: rgba(0, 0, 0, 0.75); 
+	font-size: 24px; 
+	font-family: Inter; 
+	font-weight: 400; 
+	word-wrap: break-word;
+}
+
+.start_date	{
+	left: 232px;
+	position: absolute; 
+	color: rgba(0, 0, 0, 0.75); 
+	font-size: 24px; 
+	font-family: Inter; 
+	font-weight: 400; 
+	word-wrap: break-word;
+}
+.end_date	{
+	left: 444px; 
+	position: absolute; 
+	color: rgba(0, 0, 0, 0.75); 
+	font-size: 24px; 
+	font-family: Inter; 
+	font-weight: 400; 
+	word-wrap: break-word;
+}
+.leave_type	{
+	left: 668px; 
+	position: absolute; 
+	color: rgba(0, 0, 0, 0.75); 
+	font-size: 24px; 
+	font-family: Inter; 
+	font-weight: 400; 
+	word-wrap: break-word;
+}
+.reason	{
+	left: 865px;
+	position: absolute; 
+	color: rgba(0, 0, 0, 0.75); 
+	font-size: 24px; 
+	font-family: Inter; 
+	font-weight: 400; 
+	word-wrap: break-word;
+}
+.leave_status	{
+	left: 1143px;
+	position: absolute; 
+	color: rgba(0, 0, 0, 0.75); 
+	font-size: 24px; 
+	font-family: Inter; 
+	font-weight: 400; 
+	word-wrap: break-word; 
+}
+.backbutton{
+	left: 1305px; 
+	top: 955px; 
+	position: absolute;
+	background-color: white; 
+	color: #1D8AA1;
+	border-color: transparent; 
+	font-size: 24px; 
+	font-family: Inter; 
+	font-weight: 400; 
+	word-wrap: break-word;
+}
+.request_head	{
+	 top: 228px; 
+	 position: absolute; 
+	 color: rgba(0, 0, 0, 0.75); 
+	 font-size: 24px; 
+	 font-family: Inter; 
+	 font-weight: 400; 
+	 word-wrap: break-word;
+}
+.employee_code	{
+	left: 160px; 
+	position: absolute; 
+	color: rgba(0, 0, 0, 0.75); 
+	font-size: 24px; 
+	font-family: Inter; 
+	font-weight: 400; 
+	word-wrap: break-word;
+}
+.request_name	{
+	left: 403px; 
+	position: absolute; 
+	color: rgba(0, 0, 0, 0.75); 
+	font-size: 24px; 
+	font-family: Inter; 
+	font-weight: 400; 
+	word-wrap: break-word;
+}
+.request_type	{
+	left: 570px; 
+	position: absolute; 
+	color: rgba(0, 0, 0, 0.75); 
+	font-size: 24px; 
+	font-family: Inter; 
+	font-weight: 400; 
+	word-wrap: break-word;
+}
+.request_date	{
+	left: 884px; 
+	position: absolute; 
+	color: rgba(0, 0, 0, 0.75); 
+	font-size: 24px; 
+	font-family: Inter; 
+	font-weight: 400; 
+	word-wrap: break-word;
+}
+.duration	{
+	left: 716px; 
+	position: absolute; 
+	color: rgba(0, 0, 0, 0.75); 
+	font-size: 24px; 
+	font-family: Inter; 
+	font-weight: 400; 
+	word-wrap: break-word;
+}
+.approve	{
+	width: 82px; 
+	height: 41px; 
+	left: 1167px;
+	position: absolute; 
+	background: #60F107; 
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+	border-radius: 48px;
+	border-color: transparent; 
+}
+.decline	{
+	width: 82px; 
+	height: 41px; 
+	left: 1270px;
+	position: absolute; 
+	background: #FF3D3D; 
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+	border-radius: 48px;
+	border-color: transparent; 
+}
+.inputbox	{
+	width: 505px; 
+	height: 90px; 
+	left: 564px;
+	position: absolute; 
+	background: white; 
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+	border: 1px rgba(0, 0, 0, 0.50) solid; 
+	top: 241px; 
+	position: absolute; 
+	color: rgba(0, 0, 0, 0.50); 
+	font-size: 24px; 
+	font-family: Inter; 
+	font-weight: 400; 
+	word-wrap: break-word;
+}
+.datebox	{
+	width: 306px; 
+	height: 90px; 
+	left: 564px;
+	position: absolute; 
+	background: white; 
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+	border: 1px rgba(0, 0, 0, 0.50) solid; 
+}
+.text	{
+	padding-top: 9px; 
+	padding-left: 7px; 
+	padding-right: 5px;
+	left: 319px; 
+	position: absolute; 
+	justify-content: center; 
+	align-items: center; 
+	display: inline-flex;
+	text-align: center; 
+	color: rgba(0, 0, 0, 0.75); 
+	font-size: 32px; 
+	font-family: Inter; 
+	font-weight: 400; 
+	word-wrap: break-word;
+}
