@@ -33,5 +33,4 @@
       <img src="../common/ima/basic-bar-graph.png" alt="Girl in a jacket" width="550" height="375">
   </div>
 
-
 <?php require_once('../common/footer.php') ?>

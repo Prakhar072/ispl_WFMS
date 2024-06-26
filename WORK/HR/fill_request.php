@@ -29,6 +29,6 @@
   <div style="left: 71px; top: 512px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Assign Position</div>
   <div style="width: 758px; left: 329px; top: 390px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word; text-align:left">Requesting Junior Software developers proficient in FIGMA, PHP, C++ and 3 Years of experience in AI</div>
   <div style="width: 61px; height: 61px; padding: 7.62px; left: 612px; top: 570px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
-    <input type="button" style="width: 45.75px; height: 45.75px; background: #1D8AA1" img src="C:\xampp\htdocs\ispl_internship_2024\WORK\common\img\plus-svgrepo-com.png" width="50" height="60">
+    <button style="position: relative; left:-18px; top:-5px; width: 50px; height: 50px; background:white; border:0px; border: none; cursor: pointer; appearance: none; background-color: inherit;" onclick=""><img src="../common/ima/Squared_plus.svg.png" style="position: relative; left:-15px; top:-5px; width: 60px; height: 60px;"></button>
 </div>
 <?php require_once('../common/footer.php') ?>
