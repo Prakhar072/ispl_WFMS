@@ -10,66 +10,78 @@
       <div style="float:left; width:1300px; padding-left:4px; padding-bottom:14px; text-align:start; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">System</div>
       <div style="float:right; width:30px; padding-left:4px; text-align:end; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">5</div>
       <input class="searchbar" style=" width:450px; height:30px; float:left; padding-left: 18px; margin-bottom:18px;" type="text" placeholder="Search by Name, ID or Department">
-     <div class="table"><table class="tg"><thead>
+     
+      
+      
+  
+  
+      <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
+      <div><table id="myTable"><thead>
   <tr>
-    <th class="tg-0lax">S no.</th>
-    <th class="tg-0lax">Employee Code</th>
-    <th class="tg-0lax">First Name</th>
-    <th class="tg-0lax">Last Name</th>
-    <th class="tg-0lax">Sent At</th>
-    <th class="tg-0lax">Action</th>
+    <th>S no.</th>
+    <th>Employee Code</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Sent At</th>
+    <th>Action</th>
   </tr></thead>
 <tbody>
   <tr>
-    <td class="tg-0lax">1</td>
-    <td class="tg-0lax">2022B3A70426P</td>
-    <td class="tg-0lax">PM</td>
-    <td class="tg-0lax">MP</td>
-    <td class="tg-0lax">3/5/12</td>
-    <td class="tg-0lax">EMAIL</td>
+    <td>1</td>
+    <td>2022B3A70426P</td>
+    <td>PM</td>
+    <td>MP</td>
+    <td>3/5/12</td>
+    <td>EMAIL</td>
   </tr>
   <tr>
-    <td class="tg-0lax">2</td>
-    <td class="tg-0lax">2022B3A70426P</td>
-    <td class="tg-0lax">PM</td>
-    <td class="tg-0lax">MP</td>
-    <td class="tg-0lax">3/5/12</td>
-    <td class="tg-0lax">EMAIL</td>
+    <td>2</td>
+    <td>2022B3A70426P</td>
+    <td>PM</td>
+    <td>MP</td>
+    <td>3/5/12</td>
+    <td>EMAIL</td>
   </tr>
   <tr>
-    <td class="tg-0lax">3</td>
-    <td class="tg-0lax">2022B3A70426P</td>
-    <td class="tg-0lax">PM</td>
-    <td class="tg-0lax">MP</td>
-    <td class="tg-0lax">3/5/12</td>
-    <td class="tg-0lax">EMAIL</td>
+    <td>3</td>
+    <td>2022B3A70426P</td>
+    <td>PM</td>
+    <td>MP</td>
+    <td>3/5/12</td>
+    <td>EMAIL</td>
   </tr>
   <tr>
-    <td class="tg-0lax">4</td>
-    <td class="tg-0lax">2022B3A70426P</td>
-    <td class="tg-0lax">PM</td>
-    <td class="tg-0lax">MP</td>
-    <td class="tg-0lax">3/5/12</td>
-    <td class="tg-0lax">EMAIL</td>
+    <td>4</td>
+    <td>2022B3A70426P</td>
+    <td>PM</td>
+    <td>MP</td>
+    <td>3/5/12</td>
+    <td>EMAIL</td>
   </tr>
   <tr>
-    <td class="tg-0lax">5</td>
-    <td class="tg-0lax">2022B3A70426P</td>
-    <td class="tg-0lax">PM</td>
-    <td class="tg-0lax">MP</td>
-    <td class="tg-0lax">3/5/12</td>
-    <td class="tg-0lax">EMAIL</td>
+    <td>5</td>
+    <td>2022B3A70426P</td>
+    <td>PM</td>
+    <td>MP</td>
+    <td>3/5/12</td>
+    <td>EMAIL</td>
   </tr>
   <tr>
-    <td class="tg-0lax">6</td>
-    <td class="tg-0lax">2022B3A70426P</td>
-    <td class="tg-0lax">PM</td>
-    <td class="tg-0lax">MP</td>
-    <td class="tg-0lax">3/5/12</td>
-    <td class="tg-0lax">EMAIL</td>
+    <td>6</td>
+    <td>2022B3A70426P</td>
+    <td>PM</td>
+    <td>MP</td>
+    <td>3/5/12</td>
+    <td>EMAIL</td>
   </tr>
 </tbody></table></div>
-    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+    <script>
+    $(document).ready( function () {
+        $('#myTable').DataTable();
+    } );</script>
+ 
 
   <!--</div>
   </div>-->

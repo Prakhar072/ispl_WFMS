@@ -2,7 +2,7 @@
 <html>
 <head>
     <title></title>
-    <script src="https://kit.fontawesome.com/e8732148d9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
     <link rel="stylesheet" href="../includes/css/teams.css">
 </head>
 <body>
