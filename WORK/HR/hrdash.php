@@ -1,4 +1,7 @@
-<?php require_once('../common/header.php') ?>
+<?php session_start();
+
+if (isset($_SESSION['user_id'])) {
+require_once('../common/header.php') ?>
 
 
   <div style="width: 363px; height: 853px; left: 36px; top: 145px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid"></div>
@@ -40,6 +43,7 @@
   <div style="left: 94px; top: 848px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Average CTC</div>
   <a href="https://www.youtube.com/"><div style="left: 74px; top: 946px; position: absolute; color: #1D8AA1; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">Expand Employee List</div></a>
   <a href="https://www.youtube.com/"><div style="left: 1248px; top: 970px; position: absolute; color: #1D8AA1; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">Open Notifications</div></a>
+  <a href="logout.php"><div style="left: 1228px; top: 970px; position: absolute; color: #1D8AA1; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">logout</div></a>
   <div style="left: 294px; top: 268px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">103</div>
   <div style="left: 310px; top: 384px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">12</div>
   <div style="left: 315px; top: 500px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">2</div>
@@ -70,4 +74,11 @@
   <div style="width: 14px; height: 0px; left: 1254px; top: 861px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px black solid"></div>
   <div style="width: 14px; height: 0px; left: 1390px; top: 861px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px black solid"></div>
 </div>
-<?php require_once('../common/footer.php') ?>
+<?php require_once('../common/footer.php');
+
+} else {
+  header('location:signin.php');
+  
+  }
+  
+   ?>
