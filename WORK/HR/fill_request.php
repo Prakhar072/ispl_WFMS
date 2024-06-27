@@ -1,4 +1,7 @@
-<?php require_once('../common/header.php') ?>
+<?php session_start();
+
+if (isset($_SESSION['user_id'])) {
+require_once('../common/header.php') ?>
   <div style="width: 1377px; height: 853px; left: 31px; top: 134px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid"></div>
   <div style="left: 1229px; top: 77px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Fill Request</div>
   
@@ -31,4 +34,11 @@
   <div style="width: 61px; height: 61px; padding: 7.62px; left: 612px; top: 570px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
     <button style="position: relative; left:-18px; top:-5px; width: 50px; height: 50px; background:white; border:0px; border: none; cursor: pointer; appearance: none; background-color: inherit;" onclick=""><img src="../common/ima/Squared_plus.svg.png" style="position: relative; left:-15px; top:-5px; width: 60px; height: 60px;"></button>
 </div>
-<?php require_once('../common/footer.php') ?>
+<?php require_once('../common/footer.php');
+
+} else {
+  header('location:signin.php');
+  
+  }
+  
+   ?>

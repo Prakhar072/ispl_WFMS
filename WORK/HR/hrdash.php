@@ -41,9 +41,9 @@ require_once('../common/header.php') ?>
   <div style="left: 97px; top: 616px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Average Tenure</div>
   <div style="left: 94px; top: 732px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Average Age</div>
   <div style="left: 94px; top: 848px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Average CTC</div>
-  <a href="https://www.youtube.com/"><div style="left: 74px; top: 946px; position: absolute; color: #1D8AA1; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">Expand Employee List</div></a>
-  <a href="https://www.youtube.com/"><div style="left: 1248px; top: 970px; position: absolute; color: #1D8AA1; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">Open Notifications</div></a>
-  <a href="logout.php"><div style="left: 1228px; top: 970px; position: absolute; color: #1D8AA1; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">logout</div></a>
+  <a href="int_appl.php"><div style="left: 74px; top: 946px; position: absolute; color: #1D8AA1; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">View Open Positions</div></a>
+  <a href="notifications.php"><div style="left: 1268px; top: 947px; position: absolute; color: #1D8AA1; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">Open Notifications</div></a>
+  <a href="logout.php"><div style="left: 1368px; top: 970px; position: absolute; color: red; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">logout</div></a>
   <div style="left: 294px; top: 268px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">103</div>
   <div style="left: 310px; top: 384px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">12</div>
   <div style="left: 315px; top: 500px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">2</div>

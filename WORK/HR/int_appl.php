@@ -1,4 +1,7 @@
-<?php require_once('../common/header.php') ?>
+<?php session_start();
+
+if (isset($_SESSION['user_id'])) {
+require_once('../common/header.php') ?>
 <div style="left: 1040px; top: 77px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Internal Position Requests</div>
   <div style="width: 1377px; height: 853px; left: 5px; top: 134px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid">
 
@@ -45,8 +48,8 @@
         </tbody>
     </table>
 </div>
-<input type="button" Value="Fill Vacant Positions" style=" font-size: 32px; color: white; position: absolute; top:800px; justify-self:right; width: 334px; height: 69px; background: #1D8AA1; border-radius: 44px">
-<a href="https://www.youtube.com/"><div style="left: 59px; top: 851px; position: absolute; color: #1D8AA1; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Back</div></a>
+<input type="button" Value="Fill Vacant Positions" style=" justify-self: right; font-size: 32px; color: white; position: absolute; top:800px; justify-self:right; width: 334px; height: 69px; background: #1D8AA1; border-radius: 44px">
+<a href="hrdash.php"><div style="left: 59px; top: 851px; position: absolute; color: #1D8AA1; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Back</div></a>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
     <script>
@@ -58,4 +61,11 @@
   
   </div>
 </div>
-<?php require_once('../common/footer.php') ?>
+<?php require_once('../common/footer.php');
+
+} else {
+  header('location:signin.php');
+  
+  }
+  
+   ?>

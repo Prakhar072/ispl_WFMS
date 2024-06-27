@@ -1,4 +1,8 @@
-<?php require_once('../common/header.php') ?>
+<?php session_start();
+
+if (isset($_SESSION['user_id'])) {
+require_once('../common/header.php') ?>
+
 
   
   <div style="left:78px; top:100px; position:absolute; height:800px">
@@ -33,4 +37,11 @@
       <img src="../common/ima/basic-bar-graph.png" alt="Girl in a jacket" width="550" height="375">
   </div>
 
-<?php require_once('../common/footer.php') ?>
+  <?php require_once('../common/footer.php');
+
+} else {
+  header('location:signin.php');
+  
+  }
+  
+   ?>

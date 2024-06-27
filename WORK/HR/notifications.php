@@ -1,4 +1,7 @@
-<?php require_once('../common/header.php') ?>
+<?php session_start();
+
+if (isset($_SESSION['user_id'])) {
+require_once('../common/header.php') ?>
 <div style="left: 1250px; top: 77px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Notifications</div>
   <div style="width: 1377px; height: 853px; left: 5px; top: 134px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid">
 
@@ -56,4 +59,11 @@
   
   </div>
 </div>
-<?php require_once('../common/footer.php') ?>
+<?php require_once('../common/footer.php');
+
+} else {
+  header('location:signin.php');
+  
+  }
+  
+   ?>
