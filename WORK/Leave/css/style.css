@@ -225,3 +225,17 @@
 	font-weight: 400; 
 	word-wrap: break-word;
 }
+.info_icon	{
+	width: 43px; 
+	height: 43px; 
+	padding: 3.58px; 
+	left: 1058px;
+	position: absolute; 
+	justify-content: center; 
+	align-items: center; 
+	display: inline-flex
+	width: 35.83px;
+	height: 35.83px; 
+	background: transparent;
+
+}
