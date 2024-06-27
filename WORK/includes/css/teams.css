@@ -34,7 +34,7 @@
     border: 1px rgba(0, 0, 0, 0.25) solid;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 150px repeat(20, 90px);
+    grid-template-rows: 150px 600px;
     row-gap: 20px;
     padding: 25px;
 }
