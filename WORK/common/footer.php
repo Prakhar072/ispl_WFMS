@@ -1,6 +1,6 @@
 </div>
-<div style="position:absolute; bottom: 0px; align-text:center">Copyright <?php echo date('Y') ?></div><break>
-<div style="position:absolute; bottom:0px;">Property of Stark Industries Pvt. Ltd.</div>
+<div style="bottom: 0px; align-text:center">Copyright <?php echo date('Y') ?></div><break>
+<div style="bottom:0px;">Property of Stark Industries Pvt. Ltd.</div>
 </center>
 <script src="https://kit.fontawesome.com/e8732148d9.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
