@@ -7,5 +7,4 @@
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
 <script src="../includes/js/datetime.js"></script>
 </body>
-</div>
 </html>

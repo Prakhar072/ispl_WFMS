@@ -154,3 +154,8 @@
   .imager .btn:hover {
     background-color: black;
   }
+
+  a{
+    text-decoration: none;
+    color:#1D8AA1 ;
+  }

@@ -13,15 +13,16 @@
     
     <span style="left: 1190px; top: 15px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word" id="datetime"></span>
  
-  </div>
+  
   <div style="width: 77px; height: 77px; left: 9px; top: 11px; position: absolute; background: white; border-radius: 9999px; border: 1px black solid"></div>
   <div style="width: 47px; height: 47px; padding-top: 3.67px; padding-bottom: 5.08px; padding-left: 3.64px; padding-right: 3.71px; left: 20px; top: 22px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
-    <a style="color: black;"  href="https://www.youtube.com/"><i class='fas fa-user-alt' style='font-size:35px'></i></a>
+    <a style="color: black;"  href="ind_info.html"><i class='fas fa-user-alt' style='font-size:35px'></i></a>
   </div>
   <div style="width: 178px; height: 28px; left: 93px; top: 16px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">HR Admin</div>
   <a href="employee_database.html"><div style="left: 653px; top: 16px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Database</div></a>
     <a href="teams.php"><div style="left: 779px; top: 16px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Teams</div></a>
   <div style="width: 49px; height: 49px; padding-left: 8.17px; padding-right: 8.17px; padding-top: 6.12px; padding-bottom: 6.12px; left: 586px; top: -1px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
     <a href="hrdash.php"><i class="fas fa-house-user" style="font-size: 30px;color:white;"></i></a>
+  </div>
   </div>
 <!--top navbar ends-->
