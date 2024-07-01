@@ -1,4 +1,5 @@
 <?php session_start();
+
 require_once('dbconnect.php');
 
 if (isset($_SESSION['user_id'])) {
@@ -6,7 +7,9 @@ require_once('../common/header.php') ?>
 
 <div style="left: 1150px; top: 77px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Employee Database</div>
   <div style="width: 1429px; height: 905px; left: 5px; top: 134px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid">
-
+  <div style="left: 1379px; top: 21px; position: absolute; color: #1D8AA1; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+    <a href="add_employees.php"><img src="../common/ima/greenplus.png" style="position: relative; left:-15px; top:-5px; width: 40px; height: 40px;"></a>
+    <a href="accept_reisgn.html"><img src="../common/ima/greenminus.png" style="position: relative; left:-67px; top:-50px; width: 40px; height: 40px;"></a></div>
   
  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
 </head>
@@ -52,8 +55,8 @@ require_once('../common/header.php') ?>
             $count = 1;
             while ($result = mysqli_fetch_array($query)){
                 echo "<tr>
-                <td>$count</td>
-                <td>".$result['employee_code']."</td>
+                <td> $count</td>
+                <td><a href='ind_info.php?id=".$result[0]."'>".$result['employee_code']."</a></td>
                 <td>".$result['first_name']."</td>
                 <td>".$result['last_name']."</td>
                 <td>".$result['fk_department_id']."</td>
@@ -61,22 +64,20 @@ require_once('../common/header.php') ?>
                 <td>".$result['phone']."</td>
                 <td>".$result['location_id']."</td>
                 <td>".$result['position_id']."</td>
-                </tr>";
+                </tr></a>";
                 $count++;
             }
-
             ?>
         </tbody>
     </table>
 </div>
-<div style="left: 59px; top: 851px; position: absolute; color: #1D8AA1; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word"><a href="hrdash.php">back</a></div>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
     <script>
     $(document).ready( function () {
         $('#myTable').DataTable();
     } );</script>
-  
 
   
   </div>

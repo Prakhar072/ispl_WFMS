@@ -26,7 +26,7 @@ require_once('../common/header.php') ?>
 </form>
 
   <div style="width: 304px; height: 367px; left: 46px; top: 43px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid"><img id="blah" src="#" width="304px;" height="367px;" /></div>
-  <div style="left: 1285px; top: 1003px; position: absolute; color: #1D8AA1; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word"><a styles="text-decoration:none;" href="emp_database.php">Cancel</div></a>
+  <div style="left: 1285px; top: 1003px; position: absolute; color: #1D8AA1; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word"><a styles="text-decoration:none;" href="ind_info.php">Cancel</div></a>
   
   <!--sample data entry
   (2, Bill, Gates, bill123, 2, 1, 2024-06-05, 200, 2022B3AA0321P, 2, 2024-06-01, bill@gmail.com, 8888888888, 2, active, Created by, created on)-->
