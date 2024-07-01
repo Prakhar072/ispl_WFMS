@@ -21,18 +21,31 @@ if (isset($_POST['save_details'])) {
 		$created_by      = $_SESSION['user_id'];
 		$created_on      = date('Y-m-d');
 
-		$statement = 'INSERT INTO `employee_data`(`first_name`, `last_name`, `password`, `fk_department_id`, `manager_id`, `hire_date`, `ctc`, `employee_code`, `location_id`, `dob`, `email`, `phone`, `position_id`, `created_on`, `created_by`)  
+		$statement3 = 'INSERT INTO `employee_data`(`first_name`, `last_name`, `password`, `fk_department_id`, `manager_id`, `hire_date`, `ctc`, `employee_code`, `location_id`, `dob`, `email`, `phone`, `position_id`, `created_on`, `created_by`)  
         values("'.$first_name.'","'.$last_name.'","'.$password.'","'.$department.'","'.$manager.'","'.$doj.'","'.$ctc.'","'.$employee_code.'","'.$location.'","'.$dob.'","'.$email.'","'.$phone.'","'.$position.'","'.$created_on.'","'.$created_by.'")';
+
 
 		//print_r($statement);
 // die();
-		$run_query = mysqli_query($db_connect,$statement);
+		$run_query = mysqli_query($db_connect,$statement3);
 
 		if ($run_query) {
 			echo "Data saved successfully.";
 		} else {
 			echo "Data could not be saved, please try again.";
 		}
+
+		$creator = $_SESSION['user_id'];
+
+		$statement4 = 'SELECT employee_id FROM employee_data WHERE employee_code='.$employee_code;
+		$run_query2 = mysqli_query($db_connect,$statement4);
+		$employee = mysqli_fetch_object($run_query2);
+		$employee_id = $employee->employee_id;
+		
+		$statement5 = 'INSERT INTO `notifications`(`user`,`type`,`date_time`, `affected`, `summary`)
+		values("'.$creator.'","Added Employee","'.$created_on.'","'.$employee_id.'","Added an Employee")';
+
+		$run_query3 = mysqli_query($db_connect,$statement5);
 
 }
 
