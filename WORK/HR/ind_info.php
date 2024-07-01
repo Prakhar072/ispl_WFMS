@@ -5,10 +5,21 @@ require_once('dbconnect.php');
 if (isset($_SESSION['user_id'])) {
 require_once('../common/header.php') ?>
 
+<?php if (isset($_GET['id'])) {
+  $statement = "SELECT * from employee_data where employee_id=".$_GET['id'];
+    $run_query = mysqli_query($db_connect,$statement);
+
+    if ($run_query) {
+      $user = mysqli_fetch_object($run_query);
+    }
+  }
+  ?>
+
+
 
   <div style="left: 1085px; top: 107px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Personal Information</div>
   <div style="width: 375px; height: 367px; left: 67px; top: 194px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid"></div>
-  <div style="left: 1035px; top: 683px; position: absolute; color: #1D8AA1; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word"><a href="update_data.php">Update Information</a></div>
+  <div style="left: 1035px; top: 683px; position: absolute; color: #1D8AA1; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word"><a href="update_data.php?id=<?php echo $user->employee_id ?>">Update Information</a></div>
   <div style="left: 529px; top: 211px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 600; word-wrap: break-word">Employee Details</div>
 
   <!--leave box-->
@@ -34,15 +45,6 @@ require_once('../common/header.php') ?>
   <div style="color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 600; word-wrap: break-word; justify-self:left; padding-left:15px; padding-top:15px;">Attendance</div>
   </div>
 
-  <?php if (isset($_GET['id'])) {
-  $statement = "SELECT * from employee_data where employee_id=".$_GET['id'];
-    $run_query = mysqli_query($db_connect,$statement);
-
-    if ($run_query) {
-      $user = mysqli_fetch_object($run_query);
-    }
-  }
-  ?>
 
   <!--detail box-->
   <div style="display:grid; grid-template-columns: 1fr 1fr; width: 511px; height: 783px; left: 489px; top: 194px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid">
