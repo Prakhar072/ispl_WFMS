@@ -5,15 +5,13 @@ require_once('dbconnect.php');
 if (isset($_SESSION['user_id'])) {
 require_once('../common/header.php') ?>
 
-<div style="left: 1150px; top: 77px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Employee Database</div>
+<div style="left: 1150px; top: 77px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Accept Resignations</div>
   <div style="width: 1429px; height: 905px; left: 5px; top: 134px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid">
-  <div style="left: 1379px; top: 21px; position: absolute; color: #1D8AA1; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">
-    <a href="add_employees.php"><img src="../common/ima/greenplus.png" style="position: relative; left:-15px; top:-5px; width: 40px; height: 40px;"></a>
-    <a href="accept_reisgn.php"><img src="../common/ima/greenminus.png" style="position: relative; left:-67px; top:-50px; width: 40px; height: 40px;"></a></div>
+
   
  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
 </head>
-<body>
+
 
 <div class="card-container-long" style="width: 1377px;
     height: 853px;
@@ -24,12 +22,12 @@ require_once('../common/header.php') ?>
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); 
     border: 1px rgba(0, 0, 0, 0.25) solid;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 4fr;
     grid-template-rows: 80px 600px;
     row-gap: 20px;
     padding: 25px;">
     <div>
-      <div style="position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 36px; font-family: Inter; font-weight: 500; word-wrap: break-word">Database</div>
+      <div style="position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 36px; font-family: Inter; font-weight: 500; word-wrap: break-word">Resigned Employees</div>
       <br>
 </div>
 <div>
@@ -45,18 +43,22 @@ require_once('../common/header.php') ?>
                 <th>Phone</th>
                 <th>Location</th>
                 <th>Position</th>
+                <th>Confirmation</th>
             </tr>
         </thead>
         <tbody>
-            <?php
-            $statement = 'SELECT * FROM employee_data WHERE status != "verified_resigned"';
+            <?php require_once('accept.php');
+
+            $statement = 'SELECT * FROM employee_data WHERE status = "unverified_resigned"';
             $query = mysqli_query($db_connect,$statement);
 
             $count = 1;
+             
             while ($result = mysqli_fetch_array($query)){
+              $emp_code=$result['employee_code'];
                 echo "<tr>
                 <td> $count</td>
-                <td><a href='ind_info.php?id=".$result[0]."'>".$result['employee_code']."</a></td>
+                <td>".$result['employee_code']."</td>
                 <td>".$result['first_name']."</td>
                 <td>".$result['last_name']."</td>
                 <td>".$result['fk_department_id']."</td>
@@ -64,7 +66,10 @@ require_once('../common/header.php') ?>
                 <td>".$result['phone']."</td>
                 <td>".$result['location_id']."</td>
                 <td>".$result['position_id']."</td>
-                </tr></a>";
+                <form action='' method='post'><input type='hidden' name='row_id' value='".$result['employee_id']."'>
+                <td><input type = 'submit' Name='accept' value='Accept'></td>
+                </form>
+                </tr>";
                 $count++;
             }
             ?>

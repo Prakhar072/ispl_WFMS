@@ -44,6 +44,21 @@ if (isset($_POST['update_details'])) {
 
 		if ($run_query) {
 			echo "Data updated successfully.";
+
+			$created_by      = $_SESSION['user_id'];
+			$created_on      = date('Y-m-d');
+			$creator = $_SESSION['user_id'];
+
+		$statement4 = 'SELECT employee_id FROM employee_data WHERE employee_code="'.$employee_code.'"';
+		$run_query2 = mysqli_query($db_connect,$statement4);
+		$employee = mysqli_fetch_object($run_query2);
+		$employee_id = $employee->employee_id;
+		
+		$statement5 = 'INSERT INTO `notifications`(`user`,`type`,`date_time`, `affected`, `summary`)
+		values("'.$creator.'","Updated Employee data","'.$created_on.'","'.$employee_id.'","Updated Employee Info")';
+		
+				$run_query3 = mysqli_query($db_connect,$statement5);
+
 		} else {
 			echo "Data could not be saved, please try again.";
 		}
