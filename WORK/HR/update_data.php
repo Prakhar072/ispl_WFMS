@@ -19,7 +19,7 @@ $button = '<input type="submit" class="btn" name="update_details" value="Update"
 
 <div style="left: 1054px; top: 77px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Update/New Employee</div>
   <div style="width: 1377px; height: 1053px; left: 31px; top: 134px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid">
-  <?php require_once('update.php'); ?>
+  <?php require_once('ctc_update.php'); ?>
 <form action="" method="post">
   <input type="text" value="<?php echo $user->first_name ?>" name="first_name" placeholder="First Name" style="padding:5px; width: 240px; font-size: 24px; height: 90px; left: 418px; top: 40px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid" required>  
   <input type="text" value="<?php echo $user->last_name ?>" name="last_name" placeholder="Last Name" style="padding:5px; font-size: 24px; width: 240px; height: 90px; left: 683px; top: 40px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid" required>
@@ -39,7 +39,7 @@ $button = '<input type="submit" class="btn" name="update_details" value="Update"
 </form>
 
   <div style="width: 304px; height: 367px; left: 46px; top: 43px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid"><img id="blah" src="#" width="304px;" height="367px;" /></div>
-  <div style="left: 1285px; top: 1003px; position: absolute; color: #1D8AA1; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word"><a styles="text-decoration:none;" href="ind_info.php">Cancel</div></a>
+  <div style="left: 1285px; top: 1003px; position: absolute; color: #1D8AA1; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word"><a href="ind_info.php?id=<?php echo $user->employee_id ?>">Cancel</div></a>
   
   <!--sample data entry
   (2, Bill, Gates, bill123, 2, 1, 2024-06-05, 200, 2022B3AA0321P, 2, 2024-06-01, bill@gmail.com, 8888888888, 2, active, Created by, created on)-->
