@@ -15,7 +15,11 @@ if (isset($_POST['save_details'])) {
 		$department  	 = $_POST['department'];
         $location  		 = $_POST['location'];
 		$position  		 = $_POST['position'];
-        $ctc  			 = $_POST['ctc'];
+        $base_salary  	 = $_POST['base_salary'];
+		$bonus  		 = $_POST['bonus'];
+		$benefits  		 = $_POST['benefits'];
+		$stocks  		 = $_POST['stocks'];
+		$ctc  			 = $base_salary + $bonus + $benefits + $stocks;
 		$manager  		 = $_POST['manager'];
 		$password  		 = md5($_POST['password']);
 		$created_by      = $_SESSION['user_id'];
@@ -23,7 +27,6 @@ if (isset($_POST['save_details'])) {
 
 		$statement3 = 'INSERT INTO `employee_data`(`first_name`, `last_name`, `password`, `fk_department_id`, `manager_id`, `hire_date`, `ctc`, `employee_code`, `location_id`, `dob`, `email`, `phone`, `position_id`, `created_on`, `created_by`)  
         values("'.$first_name.'","'.$last_name.'","'.$password.'","'.$department.'","'.$manager.'","'.$doj.'","'.$ctc.'","'.$employee_code.'","'.$location.'","'.$dob.'","'.$email.'","'.$phone.'","'.$position.'","'.$created_on.'","'.$created_by.'")';
-
 
 		//print_r($statement);
 // die();
@@ -40,6 +43,12 @@ if (isset($_POST['save_details'])) {
 		
 		$employee = mysqli_fetch_object($run_query2);
 		$employee_id = $employee->employee_id;
+
+		$statement6 = 'INSERT INTO `total_compensation`(`fk_employee_id`, `base_salary`, `bonus`, `benefits`, `stocks`, `total`) 
+		values("'.$employee_id.'","'.$base_salary.'","'.$bonus.'","'.$benefits.'","'.$stocks.'","'.$ctc.'")';
+
+		$run_query6 = mysqli_query($db_connect,$statement6);
+
 		
 		$statement5 = 'INSERT INTO `notifications`(`user`,`type`,`date_time`, `affected`, `summary`)
 		values("'.$creator.'","Added Employee data","'.$created_on.'","'.$employee_id.'","Added an Employee")';
