@@ -7,7 +7,7 @@ require_once('../common/header.php') ?>
 
 
   <div style=" display:grid; grid-template-rows:40fr 300fr; width: 410px; height: 775px; left: 1014px; top: 145px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid">
-  <div style="text-align: left; padding-left: 15px; padding-top: 24px; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Department Salary</div>
+  <div style="text-align: left; padding-left: 25px; padding-top: 24px; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Department Salary</div>
   <div class="chartbox">
   <canvas id="salary"></canvas>
   </div>
@@ -28,17 +28,24 @@ require_once('../common/header.php') ?>
         $female = $gen2['total'];
         $other = $gen3['total'];
   ?>
- <!--monthly data-->
+
+ <!--Headcount-->
 <?php 
   $query2 = "SELECT COUNT(*) FROM employee_data";
-  $count = 0;
   // FETCHING DATA FROM DATABASE 
   $result2 = $db_connect->query($query2); 
   $headcount = mysqli_fetch_row($result2)[0];
-
   ?>
 
-  <!--salary-->
+<!--terminations-->
+<?php 
+  $query7 = "SELECT COUNT(*) FROM employee_data WHERE status = 'verified_resigned'";
+  // FETCHING DATA FROM DATABASE 
+  $result7 = $db_connect->query($query7); 
+  $terminations = mysqli_fetch_row($result7)[0];
+  ?>
+
+  <!--salary chart-->
   <?php
     $query3 = "SELECT fk_department_id, AVG(ctc) as avg FROM employee_data GROUP BY fk_department_id";
     $result3 = $db_connect->query($query3);
@@ -48,13 +55,45 @@ require_once('../common/header.php') ?>
       $l1= $result3->fetch_assoc()['avg'];
       $avg_ctc_depwise[] = $l1;
     }
+    $avg_ctc_total = array_sum($avg_ctc_depwise);
   ?>
 
+<!--new hires-->
+<?php
+  $current = date('Y-m-01');
+  $query4 = "SELECT * FROM `employee_data` WHERE hire_date>= '$current'";
+  $result4 = $db_connect->query($query4);
+  $new_hires = $result4->num_rows;
+?>
+
+<!--average tenure-->
+<?php
+  $query5 = "SELECT TIMESTAMPDIFF(YEAR, hire_date,CURRENT_DATE) AS WorkExperience FROM employee_data";
+  $result5 = $db_connect->query($query5); 
+  $differences = array();
+  for($i=0;$i<$result5->num_rows;$i++){
+    $differences[] = $result5->fetch_assoc()['WorkExperience'];
+  }
+  $sum_tenure = array_sum($differences);
+  $avg_tenure = round($sum_tenure/$headcount,2);
+?>
+
+<!--average age-->
+<?php
+  $query6 = "SELECT TIMESTAMPDIFF(YEAR, dob,CURRENT_DATE) AS WorkExperience FROM employee_data";
+  $result6 = $db_connect->query($query6); 
+  $differences = array();
+  for($i=0;$i<$result6->num_rows;$i++){
+    $differences[] = $result6->fetch_assoc()['WorkExperience'];
+  }
+  $sum_age = array_sum($differences);
+  $avg_age = round($sum_age/$headcount,2);
+?>
 
  
 
   <div style="width: 559px; height: 412px; left: 433px; top: 582px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid">
-  <canvas id="myChart"></canvas>
+ <canvas id="myChart"></canvas>
   </div>
   
   <div style="width: 559px; height: 412px; left: 433px; top: 145px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid"></div>
@@ -73,7 +112,7 @@ require_once('../common/header.php') ?>
   <div style="width: 363px; height: 853px; left: 36px; top: 145px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid">
 
   </div>
-  <a href="int_appl.php"><div style="left: 74px; top: 946px; position: absolute; color: #1D8AA1; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">View Open Positions</div></a>
+  <a href="teams.php"><div style="left: 74px; top: 946px; position: absolute; color: #1D8AA1; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">View Open Positions</div></a>
   <div style="left: 74px; top: 177px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Monthly Metrics</div>
   <div style="width: 286px; height: 90px; left: 74px; top: 237px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid"></div>
   <div style="width: 286px; height: 90px; left: 74px; top: 353px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid"></div>
@@ -87,12 +126,12 @@ require_once('../common/header.php') ?>
   <div style="left: 97px; top: 616px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Average Tenure</div>
   <div style="left: 94px; top: 732px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Average Age</div>
   <div style="left: 94px; top: 848px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Average CTC</div>
-  <div style="left: 294px; top: 268px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word"><?php echo $headcount ?></div>
-  <div style="left: 310px; top: 384px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">12</div>
-  <div style="left: 315px; top: 500px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">2</div>
-  <div style="left: 299px; top: 616px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">6Y</div>
-  <div style="left: 294px; top: 738px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">28</div>
-  <div style="left: 281px; top: 848px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">50k</div>
+  <div style="left: 315px; top: 268px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word"><?php echo $headcount ?></div>
+  <div style="left: 317px; top: 384px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word"><?php echo $new_hires ?></div>
+  <div style="left: 315px; top: 500px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word"><?php echo $terminations ?></div>
+  <div style="left: 287px; top: 616px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word"><?php echo $avg_tenure. " Y" ?></div>
+  <div style="left: 287px; top: 738px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word"><?php echo $avg_age. " Y" ?></div>
+  <div style="left: 287px; top: 848px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word"><?php echo $avg_ctc_total ?></div>
 
 
 
