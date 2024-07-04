@@ -7,6 +7,7 @@ if (isset($_POST['save_details'])) {
 
 		$first_name  	 = $_POST['first_name'];
 		$last_name       = $_POST['last_name'];
+		$gender  		 = $_POST['gender'];
 		$phone           = $_POST['phone'];
 		$dob  			 = $_POST['dob'];
 		$doj  			 = $_POST['doj'];
@@ -25,8 +26,8 @@ if (isset($_POST['save_details'])) {
 		$created_by      = $_SESSION['user_id'];
 		$created_on      = date('Y-m-d');
 
-		$statement3 = 'INSERT INTO `employee_data`(`first_name`, `last_name`, `password`, `fk_department_id`, `manager_id`, `hire_date`, `ctc`, `employee_code`, `location_id`, `dob`, `email`, `phone`, `position_id`, `created_on`, `created_by`)  
-        values("'.$first_name.'","'.$last_name.'","'.$password.'","'.$department.'","'.$manager.'","'.$doj.'","'.$ctc.'","'.$employee_code.'","'.$location.'","'.$dob.'","'.$email.'","'.$phone.'","'.$position.'","'.$created_on.'","'.$created_by.'")';
+		$statement3 = 'INSERT INTO `employee_data`(`first_name`, `last_name`,`gender`, `password`, `fk_department_id`, `manager_id`, `hire_date`, `ctc`, `employee_code`, `location_id`, `dob`, `email`, `phone`, `position_id`, `created_on`, `created_by`)  
+        values("'.$first_name.'","'.$last_name.'", "'.$gender.'","'.$password.'","'.$department.'","'.$manager.'","'.$doj.'","'.$ctc.'","'.$employee_code.'","'.$location.'","'.$dob.'","'.$email.'","'.$phone.'","'.$position.'","'.$created_on.'","'.$created_by.'")';
 
 		//print_r($statement);
 // die();
