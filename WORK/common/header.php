@@ -16,7 +16,7 @@
   
   <div style="width: 77px; height: 77px; left: 9px; top: 11px; position: absolute; background: white; border-radius: 9999px; border: 1px black solid"></div>
   <div style="width: 47px; height: 47px; padding-top: 3.67px; padding-bottom: 5.08px; padding-left: 3.64px; padding-right: 3.71px; left: 20px; top: 22px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
-    <a style="color: black;"  href="ind_info.html"><i class='fas fa-user-alt' style='font-size:35px'></i></a>
+    <a style="color: black;"  href="ind_info.php?id=<?php echo $_SESSION['user_id'] ?>"><i class='fas fa-user-alt' style='font-size:35px'></i></a>
   </div>
   <div style="width: 178px; height: 28px; left: 93px; top: 16px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">HR Admin</div>
   

@@ -9,7 +9,7 @@ require_once('../common/header.php') ?>
   <div style=" display:grid; grid-template-rows:40fr 300fr; width: 410px; height: 775px; left: 1014px; top: 145px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid">
   <div style="text-align: left; padding-left: 25px; padding-top: 24px; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Department Salary</div>
   <div>
-  <canvas id="salary"></canvas>
+  <canvas id="salarychart"></canvas>
   </div>
   </div>
 
@@ -90,13 +90,26 @@ require_once('../common/header.php') ?>
   $avg_age = round($sum_age/$headcount,2);
 ?>
 
- 
+<!--open positions-->
+<?php
+    $query8 = "SELECT department_id, COUNT(department_id) as count FROM position_request GROUP BY department_id";
+    $result8 = $db_connect->query($query8);
+    $dep_count_pos = $result8->num_rows;
+    $pos_depwise= array();
+    for($i=0;$i<$dep_count_pos;$i++){
+      $l2= $result8->fetch_assoc()['count'];
+      $pos_depwise[] = $l2;
+    }
+  ?> 
 
   <div style="width: 559px; height: 412px; left: 433px; top: 582px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid">
  <canvas id="myChart"></canvas>
   </div>
   
-  <div style="width: 559px; height: 412px; left: 433px; top: 145px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid"></div>
+  <div style="display:grid; grid-template-rows:1fr 7fr; width: 559px; height: 412px; left: 433px; top: 145px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid">
+  <div style="text-align:left; padding-left:20px; padding-top:15px; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Open Positions by Department</div>
+  <div><canvas id="poschart"></canvas></div>
+  </div>
 
  
   <div style="width: 197px; left: 1243px; top: 91px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Dashboard</div>
@@ -135,18 +148,14 @@ require_once('../common/header.php') ?>
 
 
 
-  <div style="left: 455px; top: 177px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Open Positions by Department</div>
-  <div style="width: 54px; height: 152px; left: 503px; top: 280px; position: absolute; background: rgba(0, 7.86, 78.63, 0.75)"></div>
-  <div style="width: 54px; height: 113px; left: 596px; top: 320px; position: absolute; background: rgba(0, 201.75, 214.62, 0.75)"></div>
-  <div style="width: 54px; height: 53px; left: 689px; top: 380px; position: absolute; opacity: 0.75; background: #004AB9"></div>
-  <div style="width: 54px; height: 179px; left: 782px; top: 253px; position: absolute; opacity: 0.75; background: #0094E7"></div>
-  <div style="width: 54px; height: 86px; left: 875px; top: 346px; position: absolute; opacity: 0.75; background: #E40000"></div>
+
+
 
 
 
   <a href="logout.php"><div style="left: 1368px; top: 970px; position: absolute; color: red; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">logout</div></a>
 <a href="notifications.php"><div style="left: 1268px; top: 947px; position: absolute; color: #1D8AA1; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">Open Notifications</div></a>
-</div>
+</>
 
 
 
@@ -155,7 +164,47 @@ require_once('../common/header.php') ?>
 
 <script>
   const ctx = document.getElementById('myChart');
-  const gtx = document.getElementById('salary');
+  const gtx = document.getElementById('salarychart');
+  const rtx = document.getElementById('poschart');
+
+  new Chart(rtx, {
+    type: 'bar',
+    data: {
+        labels: [<?php 
+                $i = 1;
+                echo "$i";
+                $i++;
+                for(;$i<=$dep_count_pos;$i++){
+                  echo ", $i"; 
+                };
+            ?>],
+      datasets: [{
+        data: [<?php 
+              $i = 1;
+              echo "$pos_depwise[0]";
+              for($i=1;$i<$dep_count_pos;$i++){
+                echo ", $pos_depwise[$i]"; 
+              };
+          ?>],
+        borderWidth: 3
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+                grid: {
+                    display: false
+                }
+            }
+        },
+      maintainAspectRatio: false,
+      plugins:{
+        legend: {
+        display: false
+      }
+      }
+    }
+  });
 
   new Chart(gtx, {
     type: 'bar',
@@ -180,6 +229,13 @@ require_once('../common/header.php') ?>
       }]
     },
     options: {
+      scales: {
+        x: {
+                grid: {
+                    display: false,
+                }
+            }
+        },
       maintainAspectRatio: false,
       indexAxis: 'y',
       plugins:{
