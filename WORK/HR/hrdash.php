@@ -8,7 +8,7 @@ require_once('../common/header.php') ?>
 
   <div style=" display:grid; grid-template-rows:40fr 300fr; width: 410px; height: 775px; left: 1014px; top: 145px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid">
   <div style="text-align: left; padding-left: 25px; padding-top: 24px; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Department Salary</div>
-  <div class="chartbox">
+  <div>
   <canvas id="salary"></canvas>
   </div>
   </div>

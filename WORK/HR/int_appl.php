@@ -1,4 +1,5 @@
 <?php session_start();
+require_once('dbconnect.php');
 
 if (isset($_SESSION['user_id'])) {
 require_once('../common/header.php') ?>
@@ -9,6 +10,13 @@ require_once('../common/header.php') ?>
  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
 </head>
 <body>
+<?php
+            $statement = 'SELECT * FROM project';
+            $query = mysqli_query($db_connect,$statement);
+
+            $count = 1;
+            $result = mysqli_fetch_array($query);
+            ?>
 
 <div class="card-container-long" style="width: 1377px;
     height: 853px;
@@ -24,7 +32,7 @@ require_once('../common/header.php') ?>
     row-gap: 20px;
     padding: 25px;">
     <div>
-      <div style="position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 36px; font-family: Inter; font-weight: 500; word-wrap: break-word">Project XYZ</div>
+      <div style="position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 36px; font-family: Inter; font-weight: 500; word-wrap: break-word"><?php echo $result.[''] ?></div>
       <br>
   <div style="text-align:left; padding-top:25px; position: relative; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Electronics product deal with NVIDIA </div>
 </div>
@@ -32,19 +40,32 @@ require_once('../common/header.php') ?>
   <table id="myTable" class="display" style="float:center; margin-top:50px">
         <thead>
             <tr>
-                <th>Column 1</th>
-                <th>Column 2</th>
+                <th>S. No.</th>
+                <th>Pr</th>
+                <th>Date & Time</th>
+                <th>Affected User</th>
+                <th>type</th>
+                <th>Summary</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Row 1 Data 1</td>
-                <td>Row 1 Data 2</td>
-            </tr>
-            <tr>
-                <td>Row 2 Data 1</td>
-                <td>Row 2 Data 2</td>
-            </tr>
+        <?php
+            $statement = 'SELECT * FROM notifications';
+            $query = mysqli_query($db_connect,$statement);
+
+            $count = 1;
+            while ($result = mysqli_fetch_array($query)){
+                echo "<tr>
+                <td> $count</td>
+                <td>".$result['user']."</td>
+                <td>".$result['date_time']."</td>
+                <td>".$result['affected']."</td>
+                <td>".$result['type']."</td>
+                <td>".$result['summary']."</td>
+                </tr>";
+                $count++;
+            }
+            ?>
         </tbody>
     </table>
 </div>
