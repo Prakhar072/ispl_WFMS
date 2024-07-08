@@ -26,6 +26,14 @@ if (isset($_POST['save_details'])) {
 		$created_by      = $_SESSION['user_id'];
 		$created_on      = date('Y-m-d');
 
+
+		#$orig_file = $_FILES["file"]["tmp_name"];
+		#$target_dir = 'uploads/';
+		#$destination = $target_dir.basename($_FILES["file"]["name"]);
+		#move_uploaded_file($orig_file,$destination);
+
+		#exit();
+
 		$statement3 = 'INSERT INTO `employee_data`(`first_name`, `last_name`,`gender`, `password`, `fk_department_id`, `manager_id`, `hire_date`, `ctc`, `employee_code`, `location_id`, `dob`, `email`, `phone`, `position_id`, `created_on`, `created_by`)  
         values("'.$first_name.'","'.$last_name.'", "'.$gender.'","'.$password.'","'.$department.'","'.$manager.'","'.$doj.'","'.$ctc.'","'.$employee_code.'","'.$location.'","'.$dob.'","'.$email.'","'.$phone.'","'.$position.'","'.$created_on.'","'.$created_by.'")';
 

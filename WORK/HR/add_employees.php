@@ -28,7 +28,7 @@ require_once('../common/header.php') ?>
   
   <input type="text" name="dob" placeholder="Date of Birth" onblur="(this.type='text')" onfocus="(this.type='date')" style="padding:5px; font-size:24px; width: 509px; height: 90px; left: 418px; top: 736px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid" required>
   <input type="text" name="doj" placeholder="Date of Joining" onblur="(this.type='text')" onfocus="(this.type='date')" style="padding:5px; font-size:24px; width: 505px; height: 90px; left: 418px; top: 1016px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid" required>
-  <input type="file" name="photo" placeholder="Upload Photo" accept="image/*" id="imgInp" style="padding:5px; width: 290px; font-size: 23px; height: 33px; left: 46px; top: 430px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid">
+  <input type="file" name="file" placeholder="Upload Photo" accept="image/*" id="imgInp" style="padding:5px; width: 290px; font-size: 23px; height: 33px; left: 46px; top: 430px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid" required>
   <input type="password" name="password" placeholder="Password" style="padding:5px; font-size:24px; width: 355px; height: 90px; left: 986px; top: 1016px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid" required>
   <input type="text" name="manager" placeholder="Manager" style="padding:5px; font-size:24px; width: 505px; height: 90px; left: 418px; top: 876px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid" required>
   <input type="submit" name="save_details" value="Submit" style="color:white; font-size:36px; width: 450px; height: 69px; left: 30px; top: 1165px; position: absolute; background: #1D8AA1; border-radius: 44px">
@@ -41,7 +41,7 @@ require_once('../common/header.php') ?>
   (2, Bill, Gates, bill123, 2, 1, 2024-06-05, 200, 2022B3AA0321P, 2, 2024-06-01, bill@gmail.com, 8888888888, 2, active, Created by, created on)-->
 
 
-  <!--<script src="../includes/js/filepreview.js"></script>-->
+<script src="../includes/js/filepreview.js"></script>
 <?php require_once('../common/footer.php');
 
 } else {
