@@ -10,8 +10,7 @@ require_once('../common/header.php') ?>
   <div style="left: 1379px; top: 21px; position: absolute; color: #1D8AA1; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">
     <a href="add_employees.php"><img src="../common/ima/greenplus.png" style="position: relative; left:-15px; top:-5px; width: 40px; height: 40px;"></a>
     <a href="accept_reisgn.php"><img src="../common/ima/greenminus.png" style="position: relative; left:-67px; top:-50px; width: 40px; height: 40px;"></a></div>
-  
- <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
+ <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css">
 </head>
 <body>
 
