@@ -33,9 +33,9 @@
   
   <!--Login Button-->
   <?php require_once('forget.php'); ?>
-<form action="" method="post">
-  <!-- <input style="width: 109px; left: 665px; top: 707px; position: absolute; color: white; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word; width: 502px; height: 69px; left: 462px; top: 697px; position: absolute; background: #1D8AA1; border-radius: 28px" type="submit" name="forget_pass" value="Submit"> -->
-  <div id="forget_password" style="width: 109px; left: 665px; top: 707px; position: absolute; color: white; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word; width: 502px; height: 69px; left: 462px; top: 697px; position: absolute; background: #1D8AA1; border-radius: 28px">Forget Password</div>
+<form id="form" action="forget.php" method="post">
+<input style="width: 109px; left: 665px; top: 707px; position: absolute; color: white; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word; width: 502px; height: 69px; left: 462px; top: 697px; position: absolute; background: #1D8AA1; border-radius: 28px" type="submit" name="forget_pass" value="Submit" id="forgo"> 
+  <!--<div onclick="submit()" id="forget_password" style="width: 109px; text-align:center; color: white; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word; width: 502px; height: 69px; left: 462px; top: 697px; position: absolute; background: #1D8AA1; border-radius: 28px"><div style="top:20px;">Forget Password</div></div>-->
   <!--<div style="width: 109px; left: 665px; top: 707px; position: absolute; color: white; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word">Login </div>-->
 
   <!--email field-->
@@ -46,6 +46,7 @@
  <!--<div style="left: 478px; top: 527px; position: absolute; opacity: 0.50; color: black; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word">Password</div>-->
  <!--<div style="left: 478px; top: 406px; position: absolute; opacity: 0.50; color: black; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word">Email</div>--> 
 </div>
+
 
 
 

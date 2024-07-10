@@ -3,6 +3,20 @@
 if (isset($_SESSION['user_id'])) {
 require_once('../common/header.php') ?>
 
+<?php 
+function getName($n) {
+  $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  $randomString = '';
+
+  for ($i = 0; $i < $n; $i++) {
+      $index = rand(0, strlen($characters) - 1);
+      $randomString .= $characters[$index];
+  }
+
+  return $randomString;
+}
+?>
+
 
 <div style="left: 1054px; top: 77px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Update/New Employee</div>
   <div style="width: 1377px; height: 1253px; left: 31px; top: 134px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid">
@@ -29,7 +43,7 @@ require_once('../common/header.php') ?>
   <input type="text" name="dob" placeholder="Date of Birth" onblur="(this.type='text')" onfocus="(this.type='date')" style="padding:5px; font-size:24px; width: 509px; height: 90px; left: 418px; top: 736px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid" required>
   <input type="text" name="doj" placeholder="Date of Joining" onblur="(this.type='text')" onfocus="(this.type='date')" style="padding:5px; font-size:24px; width: 505px; height: 90px; left: 418px; top: 1016px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid" required>
   <input type="file" name="file" placeholder="Upload Photo" accept="image/*" id="imgInp" style="padding:5px; width: 290px; font-size: 23px; height: 33px; left: 46px; top: 430px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid" required>
-  <input type="password" name="password" placeholder="Password" style="padding:5px; font-size:24px; width: 355px; height: 90px; left: 986px; top: 1016px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid" required>
+  <input value="<?php echo getName(8); ?>" type="password" name="password" placeholder="Password" style="padding:5px; font-size:24px; width: 355px; height: 90px; left: 986px; top: 1016px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid" required>
   <input type="text" name="manager" placeholder="Manager" style="padding:5px; font-size:24px; width: 505px; height: 90px; left: 418px; top: 876px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid" required>
   <input type="submit" name="save_details" value="Submit" style="color:white; font-size:36px; width: 450px; height: 69px; left: 30px; top: 1165px; position: absolute; background: #1D8AA1; border-radius: 44px">
 </form>
