@@ -1,0 +1,213 @@
+
+.card-container{
+    width: 658px;
+    height: 753px;
+    overflow-y: auto;
+    left:50px;
+    top: 500px;
+    background: white; 
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); 
+    border: 1px rgba(0, 0, 0, 0.25) solid;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px repeat(3, 192px);
+    row-gap: 26px;
+    padding: 25px;
+}
+
+.card{
+    width:638px;
+    justify-self: center;
+    background: white; 
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); 
+    border: 1px rgba(0, 0, 0, 0.25) solid;
+}
+
+.card-container-long{
+    width: 1377px;
+    height: 853px;
+    /*overflow-y: auto;*/
+    left:50px;
+    top: 500px;
+    background: white; 
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); 
+    border: 1px rgba(0, 0, 0, 0.25) solid;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 600px;
+    row-gap: 20px;
+    padding: 25px;
+}
+
+.card-long{
+    width:1360px;
+    justify-self: center;
+    background: white; 
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); 
+    border: 1px rgba(0, 0, 0, 0.25) solid;
+}
+
+
+.white_card{
+    width: 676px; height: 192px;  
+    background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid;
+}
+
+.searchbar{
+    width: 574px; height: 40px; 
+    background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 48px; border: 1px rgba(0, 0, 0, 0.50) solid;
+}
+
+::placeholder{
+    color: rgb(0, 0, 0);
+    opacity: 0.5; 
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 100px;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    display: block;
+    height: 1px;
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #eee;
+    -webkit-border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: #ccc;
+    -webkit-border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    width: 50px;
+    background-color: #ccc;
+    -webkit-border-radius: 0px;
+}
+
+.tg{
+    width: 1290px;
+    height: 790px;
+    margin-top: 50px;
+	font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
+
+.tg-0lax{
+    text-align: center;
+}
+
+.table {
+    width: 1300px;
+    height: 800px;
+	justify-content: center;
+	align-items: center;
+	margin: 5px;
+    border: 2px;
+}
+
+.table td, .table th {
+  width:  Xpx;
+  border: 3px solid #000000;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+/* Container needed to position the button. Adjust the width as needed */
+.imager {
+    position: relative;
+    width: 50%;
+  }
+  
+  /* Make the image responsive */
+  .imager img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Style the button and place it in the middle of the container/image */
+  .imager .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .imager .btn:hover {
+    background-color: black;
+  }
+
+  a {
+    text-decoration: none;
+    color:#1D8AA1 ;
+  }
+
+  .info-text-left{
+    justify-self: left;
+    padding-top:25px; 
+    padding-left:25px; 
+    text-align:left; 
+    color: rgba(0, 0, 0, 0.75); 
+    font-size: 24px; 
+    font-family: Inter; 
+    font-weight: 400; 
+    word-wrap: break-word;
+  }
+
+  .info-text-right{
+    justify-self: right;
+    padding-top:25px; 
+    padding-right:25px; 
+    text-align:right; 
+    color: rgba(0, 0, 0, 0.75); 
+    font-size: 24px; 
+    font-family: Inter; 
+    font-weight: 400; 
+    word-wrap: break-word;
+  }
+
+  .topi{
+    grid-area: header;
+    padding-top: 10px;
+
+  }
+
+  .leave-box{
+  display:grid; 
+  grid-template-areas:
+    "header header";
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr; 
+  width: 381px; 
+  height: 219px; 
+  left: 1035px; 
+  top: 194px; 
+  position: absolute; 
+  background: white; 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+  border: 1px rgba(0, 0, 0, 0.50) solid;
+  }
+
+  .chartbox{
+    width:300px;
+    height:800px;
+    position:relative
+  }

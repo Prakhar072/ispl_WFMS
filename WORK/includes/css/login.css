@@ -1,0 +1,40 @@
+body{
+    font-family: Inter;
+}
+
+.form-container{
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 1px;
+    border: 1px rgba(0, 0, 0, 0.50) solid;
+    width: 50%;
+    padding: 30px;
+    margin-top: 10px;
+}
+
+.input-data{
+    font-size: 35px;
+    border: 2px rgba(0, 0, 0, 0.50) solid;
+    /*width: 502px;
+    height: 76px;*/
+    padding-left: 7px;
+    margin: 10px 0px;
+}
+
+#login-btn {
+    color: white;
+    font-size: 40px;
+    font-family: Inter;
+    font-weight: 400;
+    background: #1D8AA1;
+    border-radius: 28px;
+    width: 502px;
+    height: 69px;
+}
+
+#forget-password {
+    color: #1D8AA1; font-size: 24px;font-weight: 400;
+}
+
+#forget-password a {
+    text-decoration: none;color: #26C6DA;
+}
