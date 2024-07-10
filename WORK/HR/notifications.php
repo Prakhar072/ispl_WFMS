@@ -61,7 +61,7 @@ require_once('../common/header.php') ?>
         </tbody>
     </table>
 </div>
-<a href="https://www.youtube.com/"><div style="left: 59px; top: 851px; position: absolute; color: #1D8AA1; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Load Page 2</div></a>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
     <script>

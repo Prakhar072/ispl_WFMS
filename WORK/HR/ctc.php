@@ -6,26 +6,29 @@ require_once('../common/header.php') ?>
 
 <?php if (isset($_GET['id'])) {
 
+
+}
 $statement = 'SELECT * from total_compensation where fk_employee_id="'.$_GET['id'].'"';
   $run_query = mysqli_query($db_connect,$statement);
 
   if ($run_query) {
     $user = mysqli_fetch_object($run_query);
+  } else{
+    $user;
   }
 
 $button = '<input type="submit" class="btn" name="update_details" value="Update">';
-}
 ?>
 
 <div style="left: 1324px; top: 77px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">CTC</div>
   <div style="width: 1377px; height: 1053px; left: 31px; top: 134px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid">
   <?php require_once('ctc_update.php'); ?>
 <form action="" method="post">
-  <input type="text" value="<?php echo $user->base_salary ?>" name="base_salary" placeholder="Base Salary" style="padding:5px; width: 505px; font-size: 24px; height: 90px; left: 540px; top: 40px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid" required>  
-  <input type="text"value="<?php echo $user->bonus?>" name="bonus" placeholder="Bonus" style="padding:5px; font-size: 24px; width: 505px; height: 90px; left: 540px; top: 180px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid" required>
-  <input type="text" value="<?php echo $user->benefits ?>"name="benefits" placeholder="Benefits" style="padding:5px; font-size:24px; width: 505px; height: 90px; left: 540px; top: 320px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid" required>
-  <input type="text" value="<?php echo $user->stocks ?>"name="stocks" placeholder="stocks" style="padding:5px; font-size:24px; width: 505px; height: 90px; left: 540px; top: 460px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid" required>
-  <input type="text" value="<?php echo $user->total?>"name="total" placeholder="Total Compensation" style="padding:5px; font-size:24px; width: 509px; height: 90px; left: 540px; top: 600px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid; color:rgba(0,0,0,0.5)" readonly>
+  <input type="text" value="<?php if($user == null){echo "Not Found";}else{echo $user->base_salary;}?>" name="base_salary" placeholder="Base Salary" style="padding:5px; width: 505px; font-size: 24px; height: 90px; left: 540px; top: 40px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid" required>  
+  <input type="text"value="<?php if($user == null){echo "Not Found";}else{echo $user->bonus;}?>" name="bonus" placeholder="Bonus" style="padding:5px; font-size: 24px; width: 505px; height: 90px; left: 540px; top: 180px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid" required>
+  <input type="text" value="<?php if($user == null){echo "Not Found";}else{echo $user->benefits;}?>"name="benefits" placeholder="Benefits" style="padding:5px; font-size:24px; width: 505px; height: 90px; left: 540px; top: 320px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid" required>
+  <input type="text" value="<?php if($user == null){echo "Not Found";}else{echo $user->stocks;}?>"name="stocks" placeholder="stocks" style="padding:5px; font-size:24px; width: 505px; height: 90px; left: 540px; top: 460px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid" required>
+  <input type="text" value="<?php if($user == null){echo "Not Found";}else{echo $user->total;}?>"name="total" placeholder="Total Compensation" style="padding:5px; font-size:24px; width: 509px; height: 90px; left: 540px; top: 600px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid; color:rgba(0,0,0,0.5)" readonly>
   <input type="password" name="password" placeholder="Password" style="padding:5px; font-size:24px; width: 355px; height: 90px; left: 540px; top: 736px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid" required>
   <input type="submit" name="update_ctc" value="Update CTC" style="color:white; font-size:36px; width: 450px; height: 69px; left: 30px; top: 965px; position: absolute; background: #1D8AA1; border-radius: 44px">
 </form>

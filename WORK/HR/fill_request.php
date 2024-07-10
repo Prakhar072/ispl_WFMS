@@ -32,13 +32,19 @@ require_once('../common/header.php') ?>
 
   <!--<input type="dropbtn" style="width: 505px; height: 90px; left: 71px; top: 556px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid">
   <div style="left: 105px; top: 587px; position: absolute; color: rgba(0, 0, 0, 0.50); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Select from drop down</div>-->
-  
+  <?php
+     $query9 = "SELECT DISTINCT position_request.*, employee_data.first_name, employee_data.last_name, employee_data.employee_code, department.dep_name, position.pos_name, project.name FROM employee_data, department, position, location, position_request, project WHERE position_request.employee_id = employee_data.employee_id && position_request.position_id = position.position_id && position_request.department_id = department.department_id && position_request.project_id = project.project_id && position_request.status != 'Closed' && position_request.project_id=".$_GET['project_id'];
+     // FETCHING DATA FROM DATABASE 
+     $result9 = $db_connect->query($query9);
+     $count = $result9->num_rows;
+      $li = mysqli_fetch_row($result9);
+  ?>
   <div style="width: 243px; height: 69px; left: 1130px; top: 158px; position: absolute; background: #61FF00; border-radius: 44px"></div>
   <a href="teams.php"><div style="left: 1305px; top: 942px; position: absolute; color: #1D8AA1; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Cancel</div></a>
-  <div style="left: 76px; top: 178px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Request  </div>
+  <div style="left: 76px; top: 178px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Request ID:</div>
   <div style="left: 327px; top: 178px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word"><?php echo $user->position_id?></div>
   <div style="left: 327px; top: 231px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word"><?php echo $user->no_reqd ?></div>
-  <div style="left: 327px; top: 284px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Finance</div>
+  <div style="left: 327px; top: 284px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word"><?php echo $li[12] ?></div>
   <div style="left: 327px; top: 337px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word"><?php echo $user->date_time ?></div>
   <div style="left: 1195px; top: 178px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 1000; word-wrap: break-word">In Progress</div>
   <div style="left: 76px; top: 231px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Required No:</div>

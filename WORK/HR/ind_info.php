@@ -13,6 +13,18 @@ require_once('../common/header.php') ?>
       $user = mysqli_fetch_object($run_query);
     }
   }
+
+  $statement3 = "SELECT employee_data.*, department.dep_name, position.pos_name, location.loc_name FROM employee_data, department, position, location WHERE employee_data.fk_department_id=department.department_id && employee_data.position_id = position.position_id &&employee_data.location_id = location.location_id && employee_id=".$_GET['id'];
+            $query3 = mysqli_query($db_connect,$statement3);
+            $result = mysqli_fetch_array($query3);
+
+            $statement4 = "SELECT employee_data.*, department.dep_name, position.pos_name, location.loc_name FROM employee_data, department, position, location WHERE employee_data.fk_department_id=department.department_id && employee_data.position_id = position.position_id &&employee_data.location_id = location.location_id && employee_id=".$result['manager_id'];
+            $query4 = mysqli_query($db_connect,$statement4);
+            if ($query4){
+            $result4 = mysqli_fetch_array($query4);
+            } else {
+              $result4 = [];
+            }
   ?>
 
 
@@ -56,7 +68,7 @@ require_once('../common/header.php') ?>
   <div class="info-text-right"><?php echo $user->employee_code ?></div>
   <div class="info-text-left">Email</div>
   <div class="info-text-right"><?php echo $user->email ?></div>
-  <div class="info-text-left">Age</div>
+  <div class="info-text-left">DOB</div>
   <div class="info-text-right"><?php echo $user->dob ?></div>
   <div class="info-text-left">Joining Date</div>
   <div class="info-text-right"><?php echo $user->hire_date ?></div>
@@ -65,17 +77,17 @@ require_once('../common/header.php') ?>
   <div class="info-text-left">PTO Left</div>
   <div class="info-text-right"><?php echo $user->first_name ?></div>
   <div class="info-text-left">Rep. Manager</div>
-  <div class="info-text-right"><?php echo $user->manager_id ?></div>
+  <div class="info-text-right"><?php if($result4 == []){echo "Not Found";}else{echo $result4[1]. " " .$result4[2];}?></div>
   <div class="info-text-left">Rep. Manager Code</div>
-  <div class="info-text-right"><?php echo $user->manager_id ?></div>
+  <div class="info-text-right"><?php if($result4 == []){echo "Not Found";}else{echo $user->manager_id;}?></div>
   <div class="info-text-left">Location</div>
-  <div class="info-text-right"><?php echo $user->location_id ?></div>
+  <div class="info-text-right"><?php echo $result['loc_name'] ?></div>
   <div class="info-text-left">Phone Number</div>
   <div class="info-text-right"><?php echo $user->phone ?></div>
   <div class="info-text-left">Department</div>
-  <div class="info-text-right"><?php echo $user->fk_department_id ?></div>
+  <div class="info-text-right"><?php echo $result['dep_name'] ?></div>
   <div class="info-text-left">Role</div>
-  <div class="info-text-right"><?php echo $user->position_id ?></div> 
+  <div class="info-text-right"><?php echo $result['pos_name'] ?></div> 
   </div>
 
   <!--image box-->

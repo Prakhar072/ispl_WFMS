@@ -48,7 +48,7 @@ require_once('../common/header.php') ?>
         </thead>
         <tbody>
             <?php
-            $statement = 'SELECT * FROM employee_data WHERE status != "verified_resigned"';
+            $statement = 'SELECT employee_data.*, department.dep_name, position.pos_name, location.loc_name FROM employee_data, department, position, location WHERE employee_data.status != "verified_resigned" && employee_data.fk_department_id=department.department_id && employee_data.position_id = position.position_id &&employee_data.location_id = location.location_id';
             $query = mysqli_query($db_connect,$statement);
 
             $count = 1;
@@ -58,11 +58,11 @@ require_once('../common/header.php') ?>
                 <td><a href='ind_info.php?id=".$result[0]."'>".$result['employee_code']."</a></td>
                 <td>".$result['first_name']."</td>
                 <td>".$result['last_name']."</td>
-                <td>".$result['fk_department_id']."</td>
+                <td>".$result['dep_name']."</td>
                 <td>".$result['email']."</td>
                 <td>".$result['phone']."</td>
-                <td>".$result['location_id']."</td>
-                <td>".$result['position_id']."</td>
+                <td>".$result['loc_name']."</td>
+                <td>".$result['pos_name']."</td>
                 </tr></a>";
                 $count++;
             }

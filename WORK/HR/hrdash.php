@@ -17,7 +17,7 @@ require_once('../common/header.php') ?>
   
   <!--gender pie chart-->
   <?php 
-  $query1 = "SELECT gender, count(*) AS total FROM employee_data GROUP BY gender";
+  $query1 = "SELECT gender, count(*) AS total FROM employee_data WHERE status ='Active' GROUP BY gender";
   // FETCHING DATA FROM DATABASE 
   $result1 = $db_connect->query($query1); 
         // OUTPUT DATA OF EACH ROW 
@@ -31,7 +31,7 @@ require_once('../common/header.php') ?>
 
  <!--Headcount-->
 <?php 
-  $query2 = "SELECT COUNT(*) FROM employee_data";
+  $query2 = "SELECT COUNT(*) FROM employee_data WHERE status ='Active'";
   // FETCHING DATA FROM DATABASE 
   $result2 = $db_connect->query($query2); 
   $headcount = mysqli_fetch_row($result2)[0];
@@ -47,7 +47,7 @@ require_once('../common/header.php') ?>
 
   <!--salary chart-->
   <?php
-    $query3 = "SELECT fk_department_id, AVG(ctc) as avg FROM employee_data GROUP BY fk_department_id";
+    $query3 = "SELECT fk_department_id, AVG(ctc) as avg FROM employee_data WHERE status ='Active' GROUP BY fk_department_id";
     $result3 = $db_connect->query($query3);
     $dep_count = $result3->num_rows;
     $avg_ctc_depwise= array();
@@ -56,12 +56,13 @@ require_once('../common/header.php') ?>
       $avg_ctc_depwise[] = $l1;
     }
     $avg_ctc_total = array_sum($avg_ctc_depwise);
+    $avg_ctc_total = round($avg_ctc_total,2);
   ?>
 
 <!--new hires-->
 <?php
   $current = date('Y-m-01');
-  $query4 = "SELECT * FROM `employee_data` WHERE hire_date>= '$current'";
+  $query4 = "SELECT * FROM `employee_data` WHERE hire_date>= '$current' && status ='Active'";
   $result4 = $db_connect->query($query4);
   $new_hires = $result4->num_rows;
 ?>
@@ -92,7 +93,7 @@ require_once('../common/header.php') ?>
 
 <!--open positions-->
 <?php
-    $query8 = "SELECT department_id, COUNT(department_id) as count FROM position_request GROUP BY department_id";
+    $query8 = "SELECT department_id, COUNT(department_id) as count FROM position_request WHERE status ='Active' GROUP BY department_id";
     $result8 = $db_connect->query($query8);
     $dep_count_pos = $result8->num_rows;
     $pos_depwise= array();
