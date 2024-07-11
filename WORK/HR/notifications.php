@@ -29,7 +29,7 @@ require_once('../common/header.php') ?>
       <br>
 </div>
 <div>
-  <table id="myTable" class="display" style="float:center; margin-top:50px">
+  <table id="myTable" class="row-border" style="float:center; margin-top:50px">
         <thead>
             <tr>
                 <th>S. No.</th>
@@ -66,7 +66,10 @@ require_once('../common/header.php') ?>
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
     <script>
     $(document).ready( function () {
-        $('#myTable').DataTable();
+        $('#myTable').DataTable({
+          pageLength: 15,
+          lengthChange: false,
+        });
     } );</script>
   
 

@@ -1,3 +1,4 @@
+<script src="../includes/js/search.js"></script>
 <?php session_start();
 require_once('dbconnect.php');
 
@@ -23,30 +24,38 @@ require_once('../common/header.php') ?>
   
   <div style="left:78px; top:100px; position:absolute; height:800px">
   
-    <div class="card-container">
+    <div class="card-container" data-user-cards-container>
     <div>
     <div style="float:left; width:500px; padding-left:4px; padding-bottom:14px; text-align:start; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Open Position Requests</div>
     <div style="float:right; width:30px; padding-left:4px; text-align:end; color: black; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word"><?php echo $count ?></div>
-    <input class="searchbar" style=" width:450px; height:30px; float:left; padding-left: 18px;" type="text" placeholder="Search by Name, ID or Department">
+    <input class="searchbar" style=" width:455px; height:30px; float:left; padding-left: 18px;" type="search" placeholder="Search by Name, ID or Department" data-search>
     </div>
     <?php
     $query1 = "SELECT DISTINCT position_request.*, employee_data.first_name, employee_data.last_name, employee_data.employee_code, department.dep_name, position.pos_name, project.name FROM employee_data, department, position, location, position_request, project WHERE position_request.employee_id = employee_data.employee_id && position_request.position_id = position.position_id && position_request.department_id = department.department_id && position_request.project_id = project.project_id && position_request.status != 'Closed'";
     // FETCHING DATA FROM DATABASE 
     $result1 = $db_connect->query($query1);
     $count = $result1->num_rows;
+    ?>
+    <?php
     for($i=0;$i<$count;$i++){
       $li = mysqli_fetch_row($result1);
       echo "
       <div class='card'>
       <a href='fill_request.php?project_id=$li[3]'>
-        <p style='margin-top:15px; margin-bottom:0px; text-align:left; padding-left:15px; color: rgba(0, 0, 0, 0.75); font-size: 28px; font-family: Inter; font-weight: 400; word-wrap: break-word'>".$li[13]."</p>
-        <p style='margin-top:8px; margin-bottom:0px; text-align:left; padding-left:15px; color: rgba(0, 0, 0, 0.75); font-size: 22px; font-family: Inter; font-weight: 400; word-wrap: break-word'>".$li[9]." ".$li[10].", ".$li[12]."</p>
-        <p style='margin-top:8px; margin-bottom:20px; text-align:left; padding-left:15px; color: rgba(0, 0, 0, 0.75); font-size: 22px; font-family: Inter; font-weight: 400; word-wrap: break-word'>".$li[5]."</p>
+        <p style='margin-top:15px; margin-bottom:0px; text-align:left; padding-left:15px; color: rgba(0, 0, 0, 0.75); font-size: 28px; font-family: Inter; font-weight: 400; word-wrap: break-word' data-header>".$li[13]."</p>
+        <p style='margin-top:8px; margin-bottom:0px; text-align:left; padding-left:15px; color: rgba(0, 0, 0, 0.75); font-size: 22px; font-family: Inter; font-weight: 400; word-wrap: break-word' data-midline>".$li[9]." ".$li[10].", ".$li[12]."</p>
+        <p style='margin-top:8px; margin-bottom:20px; text-align:left; padding-left:15px; color: rgba(0, 0, 0, 0.75); font-size: 22px; font-family: Inter; font-weight: 400; word-wrap: break-word' data-body>".$li[5]."</p>
         </a>
         </div>
     
     ";} 
       ?>
+     <template data-user-template>
+        <p style='margin-top:15px; margin-bottom:0px; text-align:left; padding-left:15px; color: rgba(0, 0, 0, 0.75); font-size: 28px; font-family: Inter; font-weight: 400; word-wrap: break-word' data-header></p>
+        <p style='margin-top:8px; margin-bottom:0px; text-align:left; padding-left:15px; color: rgba(0, 0, 0, 0.75); font-size: 22px; font-family: Inter; font-weight: 400; word-wrap: break-word' data-midline></p>
+        <p style='margin-top:8px; margin-bottom:20px; text-align:left; padding-left:15px; color: rgba(0, 0, 0, 0.75); font-size: 22px; font-family: Inter; font-weight: 400; word-wrap: break-word' data-body></p>
+        </div>
+     </template>
           
     </div>
     </div>

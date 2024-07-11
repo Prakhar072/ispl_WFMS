@@ -211,3 +211,7 @@
     height:800px;
     position:relative
   }
+
+  .hide{
+    display: none;
+  }
