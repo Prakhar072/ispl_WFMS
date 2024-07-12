@@ -1,3 +1,5 @@
+<?php include 'dbconnect.php';
+  session_start();?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,13 +13,22 @@
 <div style="width: 1440px; height: 1024px; position: relative; background: white">
   <div style="width: 1377px; height: 853px; left: 31px; top: 134px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid"></div>
   <div class="headbar"></div>
-  <div class="profile_icon">
+  <a href="ind_info.php">
+    <button class="profile_icon" style="border-color: transparent;background-color: transparent;">
     <i class='fas fa-user-alt' style='font-size:35px'></i>
-  </div>    
-  <div class="head_task">Tasks</div>
-  <div class="head_project">Projects</div>
-  <div class="house_icon">
-    <i class="fas fa-house-user" style="font-size: 30px;color:white;"></i></div>
+  </button>
+  </a>
+  <a href="my_tasks.php">
+    <button class="head_task" style="border-color: transparent;background-color: transparent;">Tasks</button>
+  </a>
+  <a href="project_list.php">
+  <button class="head_project" style="border-color: transparent;background-color: transparent;">Projects</button>
+  </a>
+  <a href="employee_dash.php">
+  <button class="house_icon" style="border-color: transparent;background-color: transparent;">
+    <i class="fas fa-house-user" style="font-size: 30px;color:white;"></i>
+  </button>
+  </a>
   <div class="leave_application">Leave Application</div>
   <a href="leave_apply.php">
     <button class="intro_button" style="top: 321px;">Apply for Leave</button>
@@ -28,8 +39,7 @@
    <a href="leave_approve.php">
      <button class="intro_button" style="top: 623px;">Approve Leave</button>
   </a>
-  <?php include 'dbconnect.php';
-  session_start();
+  <?php 
   if (isset($_GET['id'])) { 
     $employee_id=$_GET['id'];
     $name=mysqli_query(db_connect,'SELECT `first_name` from `employee_data` where `employee_id`=$employee_id ');

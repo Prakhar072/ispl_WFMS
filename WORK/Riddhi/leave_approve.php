@@ -16,15 +16,23 @@
   <div style="width: 1377px; height: 853px; left: 31px; top: 134px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid"></div>
   <div style=""></div>
   <div class="headbar"></div>
-  <div class="profile_icon">
+  <a href="ind_info.php">
+    <button class="profile_icon" style="border-color: transparent;background-color: transparent;">
     <i class='fas fa-user-alt' style='font-size:35px'></i>
-  </div>
-  
-  <div class="head_task">Tasks</div>
-  <div class="head_project">Projects</div>
-  <div class="house_icon">
+  </button>
+  </a>
+  <a href="my_tasks.php">
+    <button class="head_task" style="border-color: transparent;background-color: transparent;">Tasks</button>
+  </a>
+  <a href="project_list.php">
+  <button class="head_project" style="border-color: transparent;background-color: transparent;">Projects</button>
+  </a>
+  <a href="employee_dash.php">
+  <button class="house_icon" style="border-color: transparent;background-color: transparent;">
     <i class="fas fa-house-user" style="font-size: 30px;color:white;"></i>
-  </div>
+  </button>
+  </a>
+  
   <div class="leave_box" style="top: 258px;"></div>
   <div class="leave_box" style="top: 358px;"></div>
   <div class="leave_box" style="top: 456px;"></div>
@@ -72,6 +80,8 @@
         $status=mysqli_query(db_connect,'SELECT `status` from `employee_data` where `employee_id`=$sub_id');
         $i=$i+1;
         $top=296+(100*($i));
+        $taken=$leave_type+'_taken';
+        $leave_taken=mysqli_query(db_connect,'SELECT $taken from `leave` where `employee_id`=$sub_id');
         echo '<div class="serialno" style="top:$top px;">$leave_id</div>
         <div class="employee_code" style="top:$top px;">$employee_id</div>
         <div class="request_name" style="top:$top px;">$name</div>
@@ -86,6 +96,8 @@
         if (isset($_POST['Approve'])) {
           $stmt1=mysqli_query(db_connect,'UPDATE `status`="approved" in `leave_request` where `employee_id`=$sub_id');
           $stmt2=mysqli_query(db_connect,'UPDATE `status`="approved" in `leave` where `employee_id`=$sub_id');
+          $stmt3=mysqli_query(db_connect,'UPDATE `$taken`=$leave_taken+1 `leave` where `employee_id`=$sub_id');
+
         }
         elseif (isset($_POST['Decline'])) {
           $stmt1=mysqli_query(db_connect,'UPDATE `status`="denied" in `leave_request` where `employee_id`=$sub_id');
