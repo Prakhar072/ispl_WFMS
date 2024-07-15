@@ -14,7 +14,7 @@
   <div style="width: 1377px; height: 853px; left: 31px; top: 134px; position: absolute; background: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid"></div>
   <div class="headbar"></div>
   <a href="ind_info.php">
-    <button class="profile_icon" style="border-color: transparent;background-color: transparent;">
+    <button class="profile_icon" style="border-color: transparent;background-color: transparent;top: 5px;color: white;">
     <i class='fas fa-user-alt' style='font-size:35px'></i>
   </button>
   </a>
@@ -43,9 +43,8 @@
   if (isset($_GET['id'])) { 
     $employee_id=$_GET['id'];
     $name=mysqli_query(db_connect,'SELECT `first_name` from `employee_data` where `employee_id`=$employee_id ');
-  $datetime=mysqli_query(db_connect,'SELECT NOW()');
-  $date=$datetime(0,10);
-  $time=$time(11,);
+  $date=mysqli_query(db_connect,'SELECT CURDATE()');
+    $time=mysqli_query(db_connect,'SELECT CURTIME()');
   $day=mysqli_query(db_connect,'SELECT DAYNAME()');
   echo '<div class="name">$name</div>
   <div class="date">$day, $date</div>

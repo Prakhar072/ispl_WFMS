@@ -48,9 +48,8 @@
   <div class="leave_box" style="top: 305px;"></div>
   <?php
   $name=mysqli_query(db_connect,'SELECT `first_name` from `employee_data` where `employee_id`=$employee_id ');
-    $datetime=mysqli_query(db_connect,'SELECT NOW()');
-    $date=$datetime(0,10);
-    $time=$time(11,);
+    $date=mysqli_query(db_connect,'SELECT CURDATE()');
+    $time=mysqli_query(db_connect,'SELECT CURTIME()');
     $day=mysqli_query(db_connect,'SELECT DAYNAME()');
     echo '<div class="name">$name</div>
     <div class="date">$day, $date</div>
@@ -58,15 +57,19 @@
   if (isset($_GET['id'])) {
     
     $employee_id=$_GET['id'];
+    $serailno=1;
+    while (TRUE) {
     $status=mysqli_query($db_connect,'select `status` from `leave` where `employee_id`=$employee_id');
     if ($status!="Null") {
-      echo '<div class="serialno" style="top: 238px;">1</div>';
+      echo '<div class="serialno" style="top: 238px;">$serialno</div>';
       echo '<div class="start_date" style="top: 237px;">$startdate</div>';
       echo '<div class="end_date" style="top: 239px;">$enddate</div>';
       echo '<div class="leave_type" style="top: 237px;">$type</div>';
       echo '<div class="reason" style="top: 243px;">$reason</div>';
       echo '<div class="leave_status" style="top: 239px; ">$status</div>';
+      $serailno=$serialno+1;
    }
+ }
    } ?> 
 
 </div>
