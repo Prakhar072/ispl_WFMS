@@ -9,6 +9,75 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <title></title>
     <script src="https://kit.fontawesome.com/e8732148d9.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Popup container - can be anything you want */
+.popup {
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 43px; 
+  height: 43px; 
+  padding: 3.58px; 
+  left: 1058px;
+  position: absolute; 
+  justify-content: center; 
+  align-items: center; 
+  display: inline-flex;
+  width: 35.83px;
+  height: 35.83px; 
+  background: transparent;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+</style>
 </head>
 <body>
   <center>
@@ -45,6 +114,7 @@
   <div class="request_head" style="left: 836px;">Request Date</div>
   <div class="request_head" style="left: 1038px;">Reason</div>
   <div class="request_head" style="left: 1222px;">Status</div>
+
   
 
 
@@ -123,10 +193,27 @@
         <div class="request_type" style="top:$top px;">$leave_type</div>
         <div class="duration" style="top:$top;">$start - $end</div>
         <div class="request_date" style="top:$top px;">$request_date</div>
+        <div class="popup"  style="top:$top px;" onclick="myFunction()">
+          <i class="fas fa-info-circle" style="font-size:36px;left: 1058px;"></i>
+          <span class="popuptext" id="myPopup">$reason</span>
+        </div>
+
+        <script>
+          function myFunction() {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+          }
+        </script>
+
+        <script>
+          function myFunction() {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+          }
+        </script>
         
         <button class="approve" style="$top px;">Approve</button>
-        <button class="decline" style="$top px;">Decline</button>
-        ';
+        <button class="decline" style="$top px;">Decline</button>';
         if (isset($_POST['Approve'])) {
           $stmt1=mysqli_query(db_connect,'UPDATE `status`="approved" in `leave_request` where `employee_id`=$sub_id');
           $stmt2=mysqli_query(db_connect,'UPDATE `status`="approved" in `leave` where `employee_id`=$sub_id');
@@ -142,19 +229,12 @@
     }
   }
 ?>
-<div class="info_icon" onclick="myFunction()" style="top:500 px;">
+<!--<div class="info_icon" onclick="myFunction()" style="top:500 px;">
         <i class="fas fa-info-circle" style="font-size:36px;left: 1058px;"></i>
         <span class="popuptext" id="myPopup">sick</span>
   
-</div>
+</div>-->
 
-<script>
-// When the user clicks on div, open the popup
-function myFunction() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-}
-</script>
    
   <a href="leave_portal.php">
     <button class="backbutton">Back</button>
