@@ -110,7 +110,7 @@
     <i class="fas fa-house-user" style="font-size: 30px;color:white;"></i>
   </button>
   </a>
-  <canvas id="myChart" style="width:100%;max-width:600px;left: 20px; top: 700px;position: absolute;"></canvas>
+  <canvas id="myChart" style="width:100%;max-width:600px;left: 20px; top: 720px;position: absolute;"></canvas>
   <div style="width: 394px; height: 280px; left: 67px; top: 673px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid"></div>
   <button style="left: 1210px; top: 750px; position: absolute; color: #F53B00;background-color: transparent;border-color: transparent; font-size: 30px; font-family: Inter; font-weight: 400; word-wrap: break-word">Resign</button>
   <div style="width: 511px; height: 502px; left: 489px; top: 194px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid"></div>
