@@ -26,9 +26,24 @@ if (isset($_POST['close_request'])) {
 			$statement5 = 'INSERT INTO `notifications`(`user`,`type`,`date_time`, `affected`, `summary`)
 			values("'.$creator.'","Filled Position Request","'.$created_on.'","'.$user->employee_id.'","Closed Request Completely")';
 			$run_query3 = mysqli_query($db_connect,$statement5);
+
+			echo "
+                        <script>
+                        setTimeout(function(){
+                            window.location = 'teams.php';
+                            }, 1000); 
+                        </script>
+                        ";
 		}
 		else if ($reqd_left<0){
 			echo "Error: Too many added, Allowed $user->no_reqd; Actual $count_sel";
+			echo "
+                        <script>
+                        setTimeout(function(){
+                            window.location = 'teams.php';
+                            }, 1000); 
+                        </script>
+                        ";
 		}
 		else{
 			$statement7 = 'UPDATE position_request SET no_reqd="'.$reqd_left.'" WHERE request_id='.$user->request_id;

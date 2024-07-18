@@ -69,8 +69,23 @@ if (isset($_POST['save_details'])) {
 		values("'.$creator.'","Added Employee data","'.$created_on.'","'.$employee_id.'","Added an Employee")';
 
 		$run_query3 = mysqli_query($db_connect,$statement5);
+
+		echo "
+                        <script>
+                        setTimeout(function(){
+                            window.location = 'emp_database.php';
+                            }, 1000); 
+                        </script>
+                        ";
 		} else {
 			echo "Data could not be saved, please try again.";
+			echo "
+                        <script>
+                        setTimeout(function(){
+                            window.location = 'add_employees.php';
+                            }, 1000); 
+                        </script>
+                        ";
 		}
 
 		

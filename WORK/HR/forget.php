@@ -1,6 +1,3 @@
-<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-<script src="../includes/js/email_API.js"></script>
-
 <?php require_once('dbconnect.php');
 //print_r($_SESSION);
 
@@ -30,6 +27,10 @@ if (isset($_POST['forget_pass'])) {
                 
                     return $randomString;
                 }
+                ?>
+                <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+                <script src="../includes/js/email_API.js"></script>
+                <?php
 
                 $new_pass = getName(8);
                 $new_pass_md5 = md5($new_pass);
@@ -51,30 +52,41 @@ if (isset($_POST['forget_pass'])) {
 		
 				$run_query3 = mysqli_query($db_connect,$statement5);
                 }
-                //trigger API
-                ?> 
-                <input type = "button" id="forgoz" value = "Send Email">
-
+                //triggerAPI
+                ?>
                 <script> 
-                    $(document).ready(function()
-                        {
-                            $("#forgoz").click(function() { 
+                function weirdo(){
+                    if (confirm("Are you sure you want to reset your password?")) {
                                 let reciever = <?php echo "' $reciever '" ?>;
                                 let username = <?php echo "' $username '" ?>;
                                 let new_pass = <?php echo "' $new_pass '" ?>;
-                                console.log("Hello");
-                                send_mail(reciever,username,new_pass); });
-                        });
-                    
+                                send_mail(reciever,username,new_pass);
+
+                                setTimeout(function(){
+                                    window.location = "signin.php";
+                                }, 8000); 
+                    }
+                }
                 </script>
-
-
+                <?php
+                echo"
+                <script>
+                weirdo()
+                </script>
+                ";
+                ?>
 <?php 
             } else {
-                echo "Incorrect Credentials";
+                echo"Incorrect Credentials";
+                sleep(5);
+                header("Location: forget_password.php"); 
+                exit();
             }
         } else{
-            echo "User Not Found";
+            echo"No User Found";
+            sleep(5);
+            header("Location: forget_password.php"); 
+            exit();
         }
     }
 ?>

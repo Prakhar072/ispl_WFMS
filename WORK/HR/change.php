@@ -10,7 +10,7 @@ if (isset($_POST['change_pass'])) {
         $updated_by      = $_SESSION['user_id'];
         $updated_on      = date('Y-m-d');
 
-        $statment1 = 'select password from employee_data where employee_id = "'.$_SESSION['user_id'].'"';
+        $statment1 = 'select password from employee_data where employee_id = "'.$_GET['id'].'"';
 		$query = mysqli_query($db_connect,$statment1);
 
 		 if ($query->num_rows>0) {
@@ -19,7 +19,7 @@ if (isset($_POST['change_pass'])) {
 		 	$encypted_password = $employee->password;
 
 		 	if ($password_given == $encypted_password) {
-                $statement2 = 'UPDATE employee_data SET password="'.$new_pass.'", updated_on="'.$updated_on.'", updated_by="'.$updated_by.'" WHERE employee_id='.$_SESSION['user_id'];
+                $statement2 = 'UPDATE employee_data SET password="'.$new_pass.'", updated_on="'.$updated_on.'", updated_by="'.$updated_by.'" WHERE employee_id='.$_GET['id'];
         
 		        $run_query = mysqli_query($db_connect,$statement2);
 
@@ -34,12 +34,34 @@ if (isset($_POST['change_pass'])) {
                 values("'.$creator.'","Updated Employee data","'.$created_on.'","'.$creator.'","changed Employee password")';
                 
                         $run_query3 = mysqli_query($db_connect,$statement5);
+                    
+                        echo "
+                        <script>
+                        setTimeout(function(){
+                            window.location = 'ind_info.php?id=$user->employee_id';
+                            }, 900); 
+                        </script>
+                        ";
                 }
             } else {
                 echo "Incorrect Password";
+                echo "
+                        <script>
+                        setTimeout(function(){
+                            window.location = 'change_password.php?id=$user->employee_id';
+                            }, 1000); 
+                        </script>
+                        ";
             }
         } else{
             echo "User Not Found";
+            echo "
+                        <script>
+                        setTimeout(function(){
+                            window.location = 'change_password.php?id=$user->employee_id';
+                            }, 1000); 
+                        </script>
+                        ";
         }
 }
 ?>

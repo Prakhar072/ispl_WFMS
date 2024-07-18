@@ -55,7 +55,7 @@ require_once('../common/header.php') ?>
   <div style="width: 375px; height: 367px; left: 67px; top: 194px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid"></div>
   <div style="left: 1035px; top: 683px; position: absolute; color: #1D8AA1; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word"><a href="update_data.php?id=<?php echo $user->employee_id ?>">Update Information</a></div>
   <div style="left: 1035px; top: 713px; position: absolute; color: #1D8AA1; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word"><a href="ctc.php?id=<?php echo $user->employee_id ?>">Update CTC</a></div>
-  <div style="left: 1035px; top: 943px; position: absolute; color: red; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word"><a style="color:red;" href="change_password.php">Change Password</a></div>
+  <div style="left: 1035px; top: 943px; position: absolute; color: red; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word"><a style="color:red;" href="change_password.php?id=<?php echo $user->employee_id ?>">Change Password</a></div>
   <div style="left: 529px; top: 211px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 600; word-wrap: break-word">Employee Details</div>
 
   <!--leave box-->

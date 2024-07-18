@@ -50,11 +50,33 @@ if (isset($_POST['update_ctc'])) {
 		
 				$run_query3 = mysqli_query($db_connect,$statement5);
 
+				echo "
+                        <script>
+                        setTimeout(function(){
+                            window.location = 'ind_info.php?id=$user->fk_employee_id';
+                            }, 1000); 
+                        </script>
+                        ";
+
 		} else {
 			echo "Data could not be saved, please try again.";
+			echo "
+                        <script>
+                        setTimeout(function(){
+                            window.location = 'ctc.php?id=$user->fk_employee_id';
+                            }, 1000); 
+                        </script>
+                        ";
 		}
     } else{
         echo "Incorrect password";
+		echo "
+                        <script>
+                        setTimeout(function(){
+                            window.location = 'ctc.php?id=$user->fk_employee_id';
+                            }, 1000); 
+                        </script>
+                        ";
     }
 
 }
