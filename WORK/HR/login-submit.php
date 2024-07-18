@@ -7,7 +7,7 @@ if (isset($_POST['form_submit'])) {
 		# echo "entered usenrame is : ".$user_email.' and password is : '.$password';	
 	
 
-		$statment = 'select employee_id, password from employee_data where email = "'.$email.'"';
+		$statment = 'select employee_id, password, HR from employee_data where email = "'.$email.'"';
 
 		$query = mysqli_query($db_connect,$statment);
 
@@ -18,12 +18,17 @@ if (isset($_POST['form_submit'])) {
 		 	$user_id = $employee->employee_id;
 		 	$password = md5($password);
 
-		 	if ($password == $encypted_password) {
+		 	if ($password == $encypted_password && $employee->HR) {
 		 		$_SESSION['user_id'] = $user_id;
 		 		$_SESSION['email'] = $email;
 		 		header('location:hrdash.php');
 		 	
-		 	} else {
+		 	} else if ($password == $encypted_password && !$employee->HR) {
+				$_SESSION['user_id'] = $user_id;
+				$_SESSION['email'] = $email;
+				header('location:../employee_v2/employee_dash.html');
+			
+			} else {
 		 		echo "Invalid login credentials, please try again.";
 		 	}
 
