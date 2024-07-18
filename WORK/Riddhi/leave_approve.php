@@ -229,11 +229,6 @@
     }
   }
 ?>
-<!--<div class="info_icon" onclick="myFunction()" style="top:500 px;">
-        <i class="fas fa-info-circle" style="font-size:36px;left: 1058px;"></i>
-        <span class="popuptext" id="myPopup">sick</span>
-  
-</div>-->
 
    
   <a href="leave_portal.php">

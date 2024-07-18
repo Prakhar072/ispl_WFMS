@@ -49,7 +49,6 @@
     echo '<div class="name">$name</div>
     <div class="date">$day, $head_date</div>
     <div class="time">$time</div>'; 
-    //$date=mysqli_query(db_connect,'SELECT `date` from `attendance` where `employee_id`=$employee_id ');
     $latelog=mysqli_query(db_connect,'SELECT `late_login` from `attendance` where `employee_id`=$employee_id');
       $earlylog=mysqli_query(db_connect,'SELECT `early_login` from `attendance` where `employee_id`=$employee_id');
       $PTO=mysqli_query(db_connect,'SELECT `PTO_taken` from `leave` where `employee_id`=$employee_id');
@@ -91,12 +90,12 @@
       echo '<button style="width: 260px; height: 263px; left: 1114px; top: 169px; position: absolute; background: #1D8AA1; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.25) solid;text-align: center; color: white; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Punch<br/>Attendance</button>';      
       if (isset($_POST['Punch</br>Attendance'])) {
         $checkin=mysqli_query(db_connect,'SELECT CURTIME()');
-        if ($date(8,9)=='01') {
+        if ($date(8,10)=='01') {
           $query=mysqli_query(db_connect,'INSERT into `attendance`(`employee_id`,`month`,`present`,`absent`,`date`,`checkin_time`,`late_login`,`early_login`,`status`) VALUES($employee_id,$date(5,6),0,0,$date,$checkin,0,0,"unverified")');
           }
         else {
-          $stmt1=mysqli_query(db_connect,'UPDATE `present`=$present+1 in `attendance` where `employee_id`=$employee_id AND `month`=$date(5,6)');
-          $stmt2=mysqli_query(db_connect,'UPDATE `date`=$date where `employee_id`=$employee_id AND `month`=$date(5,6)');
+          $stmt1=mysqli_query(db_connect,'UPDATE `present`=$present+1 in `attendance` where `employee_id`=$employee_id AND `month`=$date(5,7)');
+          $stmt2=mysqli_query(db_connect,'UPDATE `date`=$date where `employee_id`=$employee_id AND `month`=$date(5,7)');
         } 
         if ($checkin>'09:00:00') {
           $stmt3=mysqli_query(db_connect,'UPDATE `late_login`=$latelog+1 where `employee_id`=$employee_id');
@@ -106,7 +105,7 @@
         }
       }
       else{
-        $stmt4=mysqli_query(db_connect,'UPDATE `absent`=$absent+1 where `employee_id`=$employee_id and `month`=$date(5,6)');
+        $stmt4=mysqli_query(db_connect,'UPDATE `absent`=$absent+1 where `employee_id`=$employee_id and `month`=$date(5,7)');
       }
   
   }?>
@@ -115,15 +114,7 @@
     <button style="width: 395px; left: 129px; top: 898px; position: absolute; color: white; font-size: 40px;background-color:#1D8AA1; font-family: Inter; font-weight: 400;text-align: center;border-color: transparent; word-wrap: break-word">Confirm Attendance</button>
   </a>';
   
-  <!--<div style="width: 105px; height: 25px; left: 138px; top: 342px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">Present</div>
-  <div style="width: 105px; height: 26px; left: 138px; top: 405px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">Absent</div>
-  <div style="width: 339px; height: 339px; left: 263px; top: 216px; position: absolute; background: #0094E7; border-radius: 9999px"></div>
-  <div style="width: 338.34px; height: 340.68px; left: 601.14px; top: 216.25px; position: absolute; transform: rotate(89.99deg); transform-origin: 0 0; background: #F53B00; border-radius: 9999px"></div>
-  <div style="width: 151px; height: 151px; left: 356px; top: 310px; position: absolute; background: white; border-radius: 9999px"></div>
-  <div style="width: 39px; height: 38px; left: 90px; top: 398px; position: absolute; background: #F53B00"></div>
-  <div style="width: 39px; height: 39px; left: 90px; top: 335px; position: absolute; background: #0094E7"></div>-->
   
-  <!--<button style="left: 1156px; top: 259px; position: absolute; text-align: center; color: white; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">Punch<br/>Attendance</button>-->
   <div style="width: 381px; height: 219px; left: 698px; top: 625px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px rgba(0, 0, 0, 0.50) solid"></div>
   <div style="left: 721px; top: 648px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 600; word-wrap: break-word">Leaves Taken</div>
   <div style="left: 767px; top: 705px; position: absolute; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Sick</div>

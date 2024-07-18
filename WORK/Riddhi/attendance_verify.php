@@ -60,7 +60,7 @@
       if (manager_id==employee_id) {
         $first=mysqli_query(db_connect,'SELECT `first_name` from `employee_data` where `employee_id`=$sub_id');
         $last=mysqli_query(db_connect,'SELECT `last_name` from `employee_data` where `employee_id`=$sub_id');
-        $checkintime=mysqli_query(db_connect,'SELECT `checkin_time` from `attendance` where `employee_id`=$sub_id AND `month`=$date(5,6)');
+        $checkintime=mysqli_query(db_connect,'SELECT `checkin_time` from `attendance` where `employee_id`=$sub_id AND `month`=$date(5,7)');
 
        echo '<div class="leave_box" style="top: $top px;"></div>
        <div class="serialno" style="top:$top+12 px;">$serialno</div>
@@ -75,7 +75,7 @@
         $top=$top+100;
         $serailno=$serialno+1;
         if (isset($_POST['verify'])) {
-          $stmt=mysqli_query(db_connect,'UPDATE `status`="verified" in `attendance` where `employee_id`=$sub_id AND `month`=$date(5,6)');
+          $stmt=mysqli_query(db_connect,'UPDATE `status`="verified" in `attendance` where `employee_id`=$sub_id AND `month`=$date(5,7)');
         }
      } 
    }
