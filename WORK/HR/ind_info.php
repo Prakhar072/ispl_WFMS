@@ -47,6 +47,14 @@ require_once('../common/header.php') ?>
             } else {
               $result4 = [];
             }
+            $statement5 = 'SELECT * from attendance where employee_id="'.$_GET['id'].'"';
+            $run_query5 = mysqli_query($db_connect,$statement5);
+          
+            if ($run_query5) {
+              $user5 = mysqli_fetch_object($run_query5);
+            } else{
+              $user5;
+            }
   ?>
 
 
@@ -60,11 +68,11 @@ require_once('../common/header.php') ?>
 
   <!--leave box-->
   <div class="leave-box">
-  <div class="topi" style="display:grid; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 600; word-wrap: break-word">Leaves Taken</div>
-  <div style="color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">PTO</div>
-  <div style="color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Casual</div>
-  <div style="color: rgba(0, 0, 0, 0.75); font-size: 48px; font-family: Inter; font-weight: 600; word-wrap: break-word">0</div>
-  <div style="color: rgba(0, 0, 0, 0.75); font-size: 48px; font-family: Inter; font-weight: 600; word-wrap: break-word"><?php echo $female ?></div>
+  <div class="topi" style="display:grid; color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 600; word-wrap: break-word">Early Vs. Late</div>
+  <div style="color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Early</div>
+  <div style="color: rgba(0, 0, 0, 0.75); font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word">Late</div>
+  <div style="color: rgba(0, 0, 0, 0.75); font-size: 48px; font-family: Inter; font-weight: 600; word-wrap: break-word"><?php if($user5 == null){echo "Not Found";}else{echo $user5->early_login;}?></div>
+  <div style="color: rgba(0, 0, 0, 0.75); font-size: 48px; font-family: Inter; font-weight: 600; word-wrap: break-word"><?php if($user5 == null){echo "Not Found";}else{echo $user5->late_login;}?></div>
   </div>
 
   <!--ctc box-->
@@ -124,7 +132,7 @@ require_once('../common/header.php') ?>
     data: {
       labels: ['Present', 'Absent'],
       datasets: [{
-        data: [<?php echo $male ?>,<?php echo $female ?>],
+        data: [<?php if($user5 == null){echo "1";}else{echo $user5->present;}?>,<?php if($user5 == null){echo "1";}else{echo $user5->absent;}?>],
         borderWidth: 3
       }]
     },

@@ -26,7 +26,7 @@ if (isset($_POST['form_submit'])) {
 		 	} else if ($password == $encypted_password && !$employee->HR) {
 				$_SESSION['user_id'] = $user_id;
 				$_SESSION['email'] = $email;
-				header('location:../employee_v2/employee_dash.html');
+				header('location:../Riddhi/employee_dash.php');
 			
 			} else {
 		 		echo "Invalid login credentials, please try again.";
