@@ -4,7 +4,9 @@ The aim of the project is to create a comprehensive, modular web application tha
 <br>
 <h2>Code Status</h2>
 Currently, the HR modules have been completed fully, the employee code requires refining. The project is to be hosted online on AWS for a trial/experience. In the long-term, organisations using the project must setup their own live servers
-<h2>Deligation of Privilages</h2>
+<h2>Installation</h2>
+The Web application can be used by simply downloading and extracting the files and running as is on LocalHost, XAMPP, a free live server can be used to import the .sql file to setup the database, Currently the website is not hosted live but AWS can be used to host. It is recommended to create an initial database entry for an HR admin manually to gain access to all modules and continue from that point naturally.
+<h2>Delegation of Privilages</h2>
 The project works with two major separations of privilages.
 <ul>
   <li>HR</li>
@@ -50,7 +52,7 @@ The following languages were used (Vanilla) :
 <ul>
   <li>HTML</li>
   <li>CSS</li>
-  <li>JavaScriot</li>
+  <li>JavaScript</li>
   <li>PHP</li>
   <li>SQL</li>
   <li>GIT</li>
@@ -62,8 +64,6 @@ The following Softwares were used : Figma (design), VSCode, XAMPP, PHPMYADMIN (M
 The following were used either downloaded, or via a CDN : Jquery, chart.js, datatables.js (with respective CSS Files)
 <h2>API Integration</h2>
 This program utilises email.js API to send an email to the user when using the forget password feature
-<h2>Installation</h2>
-The Web application can be used by simply downloading and extracting the files and running as is on LocalHost, XAMPP, a free live server can be used to import the .sql file to setup the database, Currently the website is not hosted live but AWS can be used to host. It is recommended to create an initial database entry for an HR admin manually to gain access to all modules and continue from that point naturally.
 <h2>Credits</h2>
 <ul>
   <li>Mentors</li>
